@@ -1,0 +1,525 @@
+{
+  "types": { "MYSTICAL": "#B15AD8", "CONSUMABLE": "#7CD64B", "DEPLOYABLE": "#A0764B", "UNUSED": "#2C2C2C", "EQUIPMENT": "FFDA03", "MISC": "#9AA0A6"},
+  "items": {
+    "Airline Food": {
+      "type":  "CONSUMABLE",
+      "description": "Found by breaking open regular and large luggages"
+    },
+    "Aloe Vera": {
+      "type":  "CONSUMABLE",
+      "description": "Found in the mesa, using it will remove 50 heat"
+    },
+    "AMULET_CLONE": {
+      "type": "MYSTICAL",
+      "description": "On use, duplicate an item. Duplicated items will have the same number of uses available as the original item. Amulets and checkpoint flags cannot be duplicated"
+    },
+    "AMULET_DOUBLEJUMP": {
+      "type": "MYSTICAL",
+      "description": "On use, apply slow falling for .55 seconds and all scouts within 12.8 metres, then apply 3 seconds of wind walk (low gravity) for all affected scouts"
+    },
+    "AMULET_HEALING": {
+      "type": "MYSTICAL",
+      "description": "On use, heals various negative status effects and applies invincibility for 10 seconds"
+    },
+    "AMULET_INFINITESTAM": {
+      "type": "MYSTICAL",
+      "description": "On use, a yellow bubble is formed for 8 seconds around the player with a range of 9.6 metres, granting infinite stamina to the player and all scouts within the bubble"
+    },
+    "Ancient Idol": {
+      "type": "MYSTICAL",
+      "description": "Found in Mesa's Tomb, holding it grants the player invincibility. Throwing it into the lava of the kiln destroys it and unlocks the 24 Karat Badge"
+    },
+    "anti-rope cannon": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "Attaches a 7.25 metre anti-rope which spools upwards. It has zero weight and will float when dropped"
+    },
+    "anti-rope spool": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "Provides a total of 12.5 metres climbable anti gravity rope, placeable in custom lengths from 0.75m to 10m long. The rope will float upwards. It has negative weight and will float when dropped"
+    },
+    "Antidote": {
+      "type": "CONSUMABLE",
+      "description": "Can be used up to 3 times. Cooking or throwing will cause it to shatter, removing up to 20 Poison and Spores from players within 4.8 metres depending on distance"
+    },
+    "AUTOPARACHUTE": {
+      "type": "UNUSED",
+      "description": "Unused item"
+    },
+    "Backpack": {
+      "type": "EQUIPMENT",
+      "description": "Occupies the player's fourth inventory slot and provides four additional storage slots"
+    },
+    "Balloon": {
+      "type": "CONSUMABLE",
+      "description": "On use, attaches a single ballon to the player. Dropping it causes it to fly away. Each attached ballon reduces gravity by 18%, with 6 or more granting an additional 100% reduction, causing them to fly upwards until popped (2 minutes or until the player ascends 160 metres)"
+    },
+    "Balloon Bunch": {
+      "type": "CONSUMABLE",
+      "description": "On use, attaches a bunch of balloons to the player, reducing gravity by 54% for 2 minutes or until 100 metres have been ascended. Dropping it causes it to fly away"
+    },
+    "Bandages": {
+      "type": "CONSUMABLE",
+      "description": "Single-use. Heals injury on the user"
+    },
+    "Beehive": {
+      "type": "MISC",
+      "description": "Found in trees in the tropics. Breaking it open drops four Honeycombs and releases the bees inside"
+    },
+    "Berrynana Peel": {
+      "type": "MISC",
+      "description": "Dropped after eating a Berrynana. Scouts who step on it will slip"
+    },
+    "Big Egg": {
+      "type": "CONSUMABLE",
+      "description": "Found in the caldera. Breaking it open yields an Egg, or rarely a pre-cooked Bird"
+    },
+    "Big Lollipop": {
+      "type": "CONSUMABLE",
+      "description": "Grants infinite stamina to the user while being eaten"
+    },
+    "Bing Bong": {
+      "type": "MISC",
+      "description": "BING BONG!"
+    },
+    "Binoculars": {
+      "type": "EQUIPMENT",
+      "description": "Held to zoom in and view distant terrain"
+    },
+    "Bird": {
+      "type": "CONSUMABLE",
+      "description": "Found in the caldera, hatched from eggs. Spawns pre-cooked"
+    },
+    "Black Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics"
+    },
+    "Blowgun": {
+      "type": "MISC",
+      "description": "Fires darts at other scouts. Does not spawn in solo play"
+    },
+    "Blue Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+    },
+    "Blue Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Releases spores, and produces a harmful effect when eaten"
+    },
+    "Bounce Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "Found in the roots. Creates a bouncy platform when thrown at a surface"
+    },
+    "Brown Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+    },
+    "Bugle": {
+      "type": "EQUIPMENT",
+      "description": "Found at the photobooth and crash site. Plays a musical note when used"
+    },
+    "Bugle of Friendship": {
+      "type": "MYSTICAL",
+      "description": "While played, grants all scouts in a large radius infinite stamina, up to a total of 7.5 seconds"
+    },
+    "Bugle Shroom": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+    },
+    "Button Shroom": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+    },
+    "Cactus": {
+      "type": "CONSUMABLE",
+      "description": "Found in the mesa. Afflicts thorns onto the user"
+    },
+    "Candlestick": {
+      "type": "EQUIPMENT",
+      "description": "Found in the gloom and the Citadel. Provides a source of light"
+    },
+    "Chain Launcher": {
+      "type": "DEPLOYABLE",
+      "description": "Creates a climbable chain between two points"
+    },
+    "Checkpoint Flag": {
+      "type": "DEPLOYABLE",
+      "description": "Places a single-use respawn checkpoint for the scout who placed it"
+    },
+    "Chubby Shroom": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics and roots"
+    },
+    "Climbing Chalk": {
+      "type": "UNUSED",
+      "description": "Unused item"
+    },
+    "Cloud Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "Found in the roots. Creates a platform when thrown at a wall"
+    },
+    "Cluster Shroom": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+    },
+    "Coconut": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics and mesa. Breaking it yields two Coconut Halves"
+    },
+    "Coconut Half": {
+      "type": "CONSUMABLE",
+      "description": "Created by breaking a Coconut"
+    },
+    "Compass": {
+      "type": "EQUIPMENT",
+      "description": "Found at the shore crash site. Points towards the PEAK"
+    },
+    "Conch": {
+      "type": "MISC",
+      "description": "Found on the shore. Can be thrown, but serves little other purpose"
+    },
+    "Cure-All": {
+      "type": "CONSUMABLE",
+      "description": "On use, removes nearly every negative status effect from the user"
+    },
+    "Cursed Skull": {
+      "type": "MYSTICAL",
+      "description": "On use, instantly kills the scout holding it and grants bonus stamina to other players"
+    },
+    "Dynamite": {
+      "type": "MISC",
+      "description": "Found on the ground and in luggage in the mesa. Detonates after a short fuse, afflicting injury to nearby scouts"
+    },
+    "EARLYWORM": {
+      "type": "CONSUMABLE",
+      "description": "Found in the gloom. Removes drowsiness from the user"
+    },
+    "Egg": {
+      "type": "CONSUMABLE",
+      "description": "Found in the caldera and gloom, or produced by breaking a Big Egg"
+    },
+    "Energy Drink": {
+      "type": "CONSUMABLE",
+      "description": "Grants a temporary speed boost and afflicts drowsiness"
+    },
+    "Faerie Lantern": {
+      "type": "MYSTICAL",
+      "description": "Removes several negative status effects from the user over 30 seconds"
+    },
+    "Fannypack": {
+      "type": "EQUIPMENT",
+      "description": "Worn to provide additional storage slots"
+    },
+    "First Aid Kit": {
+      "type": "CONSUMABLE",
+      "description": "Takes 5 seconds to use. Removes poison and spores, and heals injury"
+    },
+    "Flare": {
+      "type": "EQUIPMENT",
+      "description": "Found at the crash site and peak. Summons the rescue helicopter when used at the PEAK"
+    },
+    "Fortified Milk": {
+      "type": "CONSUMABLE",
+      "description": "Removes heat from the user"
+    },
+    "Frisbee": {
+      "type": "MISC",
+      "description": "Thrown through the air, and can bonk other scouts"
+    },
+    "Frog": {
+      "type": "MISC",
+      "description": "Found in the gloom. Can be picked up and carried"
+    },
+    "FrogLegs": {
+      "type": "CONSUMABLE",
+      "description": "Harvested from a Frog"
+    },
+    "Glider": {
+      "type": "EQUIPMENT",
+      "description": "Held while falling to glide slowly and steer through the air"
+    },
+    "Gold Prickleberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the mesa. Removes heat and heals injury, but afflicts thorns"
+    },
+    "Granola Bar": {
+      "type": "CONSUMABLE",
+      "description": "Found throughout the climb"
+    },
+    "Green Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics"
+    },
+    "Green Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "Found across most biomes. Afflicts poison 2 seconds after eating"
+    },
+    "Green Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Afflicts poison onto the user"
+    },
+    "Green Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Releases spores, and produces a harmful effect when eaten"
+    },
+    "Guidebook": {
+      "type": "EQUIPMENT",
+      "description": "Found at the shore crash site. Teaches basic gameplay"
+    },
+    "Heat Pack": {
+      "type": "CONSUMABLE",
+      "description": "Found in the alpine. Removes cold from the user"
+    },
+    "Honeycomb": {
+      "type": "CONSUMABLE",
+      "description": "Obtained by breaking a Beehive in the tropics and roots"
+    },
+    "Hot Dog": {
+      "type": "CONSUMABLE",
+      "description": "Found throughout the climb"
+    },
+    "Jetpack": {
+      "type": "EQUIPMENT",
+      "description": "Worn to propel the scout upwards while its fuel lasts"
+    },
+    "Lantern": {
+      "type": "EQUIPMENT",
+      "description": "Found in the tropics and alpine. Provides light and removes cold"
+    },
+    "Magic Bean": {
+      "type": "CONSUMABLE",
+      "description": "Grows a climbable vine up to 10 metres tall roughly 3 seconds after being planted, if unobstructed"
+    },
+    "Mandrake": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Screams when uprooted. Eaten raw, it hides the stamina bar for 60 seconds"
+    },
+    "Marshmallow": {
+      "type": "CONSUMABLE",
+      "description": "Found throughout the climb. Can be roasted over a fire"
+    },
+    "Medicinal Root": {
+      "type": "CONSUMABLE",
+      "description": "Found on the shore, tropics, roots and mesa. Removes poison and spores, and heals injury"
+    },
+    "Megaphone": {
+      "type": "EQUIPMENT",
+      "description": "Amplifies the scout's voice over a long distance"
+    },
+    "Napberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the alpine. Afflicts drowsiness, and removes all status effects except curse"
+    },
+    "Orange Winterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the alpine. Removes heat from the user"
+    },
+    "Pandora's Lunchbox": {
+      "type": "CONSUMABLE",
+      "description": "Can be used 3 times. Each use randomizes the user's status effects"
+    },
+    "Parasol": {
+      "type": "EQUIPMENT",
+      "description": "Protects the scout from the mesa's sunlight, and slows a fall when held"
+    },
+    "Pirate's Compass": {
+      "type": "EQUIPMENT",
+      "description": "Points to the nearest unopened luggage or unused Ancient Statue"
+    },
+    "Piton": {
+      "type": "DEPLOYABLE",
+      "description": "Attaches to a climbable surface, providing a point for scouts to grab and rest"
+    },
+    "Portable Stove": {
+      "type": "DEPLOYABLE",
+      "description": "Placed to cook items. Lasts 60 seconds after being placed"
+    },
+    "Purple Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics"
+    },
+    "Purple Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Releases spores, and produces a random good or bad effect when eaten"
+    },
+    "Red Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Heals injury on the user"
+    },
+    "Red Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "Found across most biomes"
+    },
+    "Red Prickleberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the mesa. Removes heat, but afflicts thorns"
+    },
+    "Red Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Releases spores, and produces a beneficial effect when eaten"
+    },
+    "Remedy Fungus": {
+      "type": "CONSUMABLE",
+      "description": "Releases a cloud of healing smoke with an 8 metre radius when dropped"
+    },
+    "Rescue Claw": {
+      "type": "EQUIPMENT",
+      "description": "Can be used 3 times. Pulls the wielder toward terrain, or pulls other scouts toward them"
+    },
+    "RitualDagger": {
+      "type": "MYSTICAL",
+      "description": "Found in ancient luggage and statues. On use, removes the user's negative status effects"
+    },
+    "Rocketpack": {
+      "type": "EQUIPMENT",
+      "description": "Worn to launch the scout upwards in a single burst"
+    },
+    "rope cannon": {
+      "type": "DEPLOYABLE",
+      "description": "Fires a harpoon that drops a climbable rope where it strikes a compatible surface"
+    },
+    "rope spool": {
+      "type": "DEPLOYABLE",
+      "description": "Deploys climbable rope up to 10 metres long, attachable to any climbable surface"
+    },
+    "Scorchberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics, roots and alpine. Afflicts heat onto the user"
+    },
+    "Scorpion": {
+      "type": "MISC",
+      "description": "Found in the mesa. Can be held but not stored in an inventory slot, and cannot be eaten raw"
+    },
+    "Scout Cannon": {
+      "type": "DEPLOYABLE",
+      "description": "Places a cannon that launches scouts across the map. Afflicts injury on launch"
+    },
+    "Scout Cookies": {
+      "type": "CONSUMABLE",
+      "description": "Can be used 4 times"
+    },
+    "Scout Effigy": {
+      "type": "MYSTICAL",
+      "description": "Resurrects a dead scout at a target location. Does not spawn in solo play"
+    },
+    "Scoutmaster's Bugle": {
+      "type": "MYSTICAL",
+      "description": "Grants the user and nearby scouts bonus stamina, and summons the Scoutmaster for two minutes"
+    },
+    "SCOUTMASTERSOUL": {
+      "type": "MYSTICAL",
+      "description": "Freed from a bubble in Nadir. Carrying it to the PEAK restores the Scoutmaster and unlocks the secret ending"
+    },
+    "ScoutsHonor": {
+      "type": "MYSTICAL",
+      "description": "Held by the Stone Scout at the PEAK. On use, transports all players to Nadir"
+    },
+    "Scroll": {
+      "type": "MISC",
+      "description": "Found at campfires. Opens to reveal a Torn Page"
+    },
+    "Shelf Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "Creates a platform when thrown at a wall"
+    },
+    "Skull": {
+      "type": "UNUSED",
+      "description": "Unused item"
+    },
+    "Small Egg": {
+      "type": "CONSUMABLE",
+      "description": "Found in the gloom"
+    },
+    "SNOWBALL": {
+      "type": "MISC",
+      "description": "Found in the alpine. Can be thrown at other scouts"
+    },
+    "Sports Drink": {
+      "type": "CONSUMABLE",
+      "description": "Removes a large amount of heat from the user"
+    },
+    "Stick": {
+      "type": "MISC",
+      "description": "Can be thrown or used as fuel for a fire"
+    },
+    "Stone": {
+      "type": "MISC",
+      "description": "Can be picked up and thrown"
+    },
+    "Strange Gem": {
+      "type": "MYSTICAL",
+      "description": "Held by the Stone Scout at the PEAK. Can be toggled on and off, but serves no practical purpose"
+    },
+    "Sunscreen": {
+      "type": "CONSUMABLE",
+      "description": "Can be used 3 times. Each spray grants sun protection for 90 seconds"
+    },
+    "THEBOOKOFBONES": {
+      "type": "MYSTICAL",
+      "description": "On use, afflicts curse onto the holder"
+    },
+    "Tick": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Does not afflict poison when eaten"
+    },
+    "Torch": {
+      "type": "EQUIPMENT",
+      "description": "Found only inside the mesa's Tomb. Provides light for a limited time"
+    },
+    "Torn Page": {
+      "type": "MISC",
+      "description": "Revealed by opening a Scroll"
+    },
+    "Trail Mix": {
+      "type": "CONSUMABLE",
+      "description": "Found throughout the climb"
+    },
+    "VOIDLAUNCHER": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "Found in ancient luggage and statues. Shoots an anti-sphere up to 40 metres away that reverses gravity where it lands"
+    },
+    "WARP COMPASS": {
+      "type": "MYSTICAL",
+      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map"
+    },
+    "Warp Compass": {
+      "type": "MYSTICAL",
+      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map"
+    },
+    "Warp Fungus": {
+      "type": "MYSTICAL",
+      "description": "When thrown, teleports the user to where it lands"
+    },
+    "Warpsketball": {
+      "type": "UNUSED",
+      "description": "Unused item"
+    },
+    "Weird Shroom": {
+      "type": "UNUSED",
+      "description": "Unused item"
+    },
+    "Yellow Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+    },
+    "Yellow Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics"
+    },
+    "Yellow Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "Found across most biomes"
+    },
+    "Yellow Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Afflicts poison 3 seconds after eating"
+    },
+    "Yellow Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the roots. Releases spores, and produces a beneficial effect when eaten"
+    },
+    "Yellow Winterberry": {
+      "type": "CONSUMABLE",
+      "description": "Found in the alpine. Removes heat and heals injury"
+    }
+  }
+}

@@ -1,0 +1,525 @@
+{
+  "types": { "MYSTICAL": "#B15AD8", "CONSUMABLE": "#7CD64B", "DEPLOYABLE": "#A0764B", "UNUSED": "#2C2C2C", "EQUIPMENT": "FFDA03", "MISC": "#9AA0A6"},
+  "items": {
+    "Airline Food": {
+      "type":  "CONSUMABLE",
+      "description": "打破普通和大号行李箱获得"
+    },
+    "Aloe Vera": {
+      "type":  "CONSUMABLE",
+      "description": "在台地发现，使用可消除50点炎热"
+    },
+    "AMULET_CLONE": {
+      "type": "MYSTICAL",
+      "description": "使用后复制一件物品。复制出的物品与原物品使用次数相同。护身符和检查点旗帜无法复制"
+    },
+    "AMULET_DOUBLEJUMP": {
+      "type": "MYSTICAL",
+      "description": "使用后为12.8米内所有侦察兵施加0.55秒缓降，再为受影响的侦察兵施加3秒风行（低重力）"
+    },
+    "AMULET_HEALING": {
+      "type": "MYSTICAL",
+      "description": "使用后治愈多种负面状态效果，并施加10秒无敌"
+    },
+    "AMULET_INFINITESTAM": {
+      "type": "MYSTICAL",
+      "description": "使用后在玩家周围形成持续8秒、半径9.6米的黄色气泡，使气泡内的玩家与所有侦察兵获得无限耐力"
+    },
+    "Ancient Idol": {
+      "type": "MYSTICAL",
+      "description": "在台地之墓发现，持有它可使玩家无敌。将其投入窑炉的岩浆中会将其摧毁，并解锁24K徽章"
+    },
+    "anti-rope cannon": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "发射一根向上卷绕的7.25米反重力绳索。零重量，丢弃后会漂浮"
+    },
+    "anti-rope spool": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "提供共12.5米可攀爬的反重力绳索，可自定义铺设0.75米至10米长度。绳索会向上漂浮。负重量，丢弃后会漂浮"
+    },
+    "Antidote": {
+      "type": "CONSUMABLE",
+      "description": "最多可使用3次。烹饪或投掷会使其碎裂，根据距离清除4.8米内玩家身上最多20点中毒与孢子"
+    },
+    "AUTOPARACHUTE": {
+      "type": "UNUSED",
+      "description": "未使用物品"
+    },
+    "Backpack": {
+      "type": "EQUIPMENT",
+      "description": "占用玩家第四个物品栏位，提供四个额外储存栏位"
+    },
+    "Balloon": {
+      "type": "CONSUMABLE",
+      "description": "使用后为玩家系上一只气球。丢弃后气球会飞走。每只气球降低18%重力，6只及以上额外降低100%，使其向上飞升直至破裂（2分钟或玩家上升160米）"
+    },
+    "Balloon Bunch": {
+      "type": "CONSUMABLE",
+      "description": "使用后为玩家系上一串气球，在2分钟内或上升100米前降低54%重力。丢弃后气球会飞走"
+    },
+    "Bandages": {
+      "type": "CONSUMABLE",
+      "description": "一次性使用。治愈使用者的受伤"
+    },
+    "Beehive": {
+      "type": "MISC",
+      "description": "在热带的树上发现。打破后掉落四个蜂巢块，并放出里面的蜜蜂"
+    },
+    "Berrynana Peel": {
+      "type": "MISC",
+      "description": "食用浆蕉后掉落。踩到它的侦察兵会滑倒"
+    },
+    "Big Egg": {
+      "type": "CONSUMABLE",
+      "description": "在火山口发现。打破后获得一枚蛋，或小概率获得一只已烤熟的鸟"
+    },
+    "Big Lollipop": {
+      "type": "CONSUMABLE",
+      "description": "食用期间使使用者获得无限耐力"
+    },
+    "Bing Bong": {
+      "type": "MISC",
+      "description": "叮——咚！"
+    },
+    "Binoculars": {
+      "type": "EQUIPMENT",
+      "description": "手持可放大观察远处地形"
+    },
+    "Bird": {
+      "type": "CONSUMABLE",
+      "description": "在火山口发现，由蛋孵化。生成时即已烤熟"
+    },
+    "Black Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现"
+    },
+    "Blowgun": {
+      "type": "MISC",
+      "description": "向其他侦察兵发射飞镖。单人游戏中不会生成"
+    },
+    "Blue Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。食用后掉落浆蕉皮"
+    },
+    "Blue Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。释放孢子，食用后产生有害效果"
+    },
+    "Bounce Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "在根系区发现。扔向表面时形成弹跳平台"
+    },
+    "Brown Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。食用后掉落浆蕉皮"
+    },
+    "Bugle": {
+      "type": "EQUIPMENT",
+      "description": "在拍照点和坠机点发现。使用时发出音符"
+    },
+    "Bugle of Friendship": {
+      "type": "MYSTICAL",
+      "description": "吹奏期间为大片半径内所有侦察兵提供无限耐力，最长共7.5秒"
+    },
+    "Bugle Shroom": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+    },
+    "Button Shroom": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+    },
+    "Cactus": {
+      "type": "CONSUMABLE",
+      "description": "在台地发现。对使用者施加荆棘"
+    },
+    "Candlestick": {
+      "type": "EQUIPMENT",
+      "description": "在暗影之地和城堡发现。提供光源"
+    },
+    "Chain Launcher": {
+      "type": "DEPLOYABLE",
+      "description": "在两点之间创造可攀爬的链条"
+    },
+    "Checkpoint Flag": {
+      "type": "DEPLOYABLE",
+      "description": "为放置它的侦察兵设置一个一次性重生检查点"
+    },
+    "Chubby Shroom": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带和根系区发现"
+    },
+    "Climbing Chalk": {
+      "type": "UNUSED",
+      "description": "未使用物品"
+    },
+    "Cloud Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "在根系区发现。扔向墙壁时形成平台"
+    },
+    "Cluster Shroom": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+    },
+    "Coconut": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带和台地发现。打破后获得两半椰子"
+    },
+    "Coconut Half": {
+      "type": "CONSUMABLE",
+      "description": "由打破椰子获得"
+    },
+    "Compass": {
+      "type": "EQUIPMENT",
+      "description": "在海岸坠机点发现。指向峰顶（PEAK）"
+    },
+    "Conch": {
+      "type": "MISC",
+      "description": "在海岸发现。可以投掷，但除此之外没什么用处"
+    },
+    "Cure-All": {
+      "type": "CONSUMABLE",
+      "description": "使用后清除使用者身上几乎所有的负面状态效果"
+    },
+    "Cursed Skull": {
+      "type": "MYSTICAL",
+      "description": "使用后立即杀死持有它的侦察兵，并为其他玩家提供额外耐力"
+    },
+    "Dynamite": {
+      "type": "MISC",
+      "description": "在台地的地面和行李中发现。短暂引信后引爆，使附近侦察兵受伤"
+    },
+    "EARLYWORM": {
+      "type": "CONSUMABLE",
+      "description": "在暗影之地发现。清除使用者的困倦"
+    },
+    "Egg": {
+      "type": "CONSUMABLE",
+      "description": "在火山口和暗影之地发现，或由打破大蛋获得"
+    },
+    "Energy Drink": {
+      "type": "CONSUMABLE",
+      "description": "提供暂时的速度提升，并施加困倦"
+    },
+    "Faerie Lantern": {
+      "type": "MYSTICAL",
+      "description": "在30秒内清除使用者身上的多种负面状态效果"
+    },
+    "Fannypack": {
+      "type": "EQUIPMENT",
+      "description": "佩戴后提供额外储存栏位"
+    },
+    "First Aid Kit": {
+      "type": "CONSUMABLE",
+      "description": "使用需要5秒。清除中毒和孢子，并治愈受伤"
+    },
+    "Flare": {
+      "type": "EQUIPMENT",
+      "description": "在坠机点和峰顶发现。在峰顶使用时召唤救援直升机"
+    },
+    "Fortified Milk": {
+      "type": "CONSUMABLE",
+      "description": "清除使用者的炎热"
+    },
+    "Frisbee": {
+      "type": "MISC",
+      "description": "在空中投掷，可以砸到其他侦察兵"
+    },
+    "Frog": {
+      "type": "MISC",
+      "description": "在暗影之地发现。可以捡起并携带"
+    },
+    "FrogLegs": {
+      "type": "CONSUMABLE",
+      "description": "从青蛙身上采集"
+    },
+    "Glider": {
+      "type": "EQUIPMENT",
+      "description": "下落时手持可缓慢滑翔并空中转向"
+    },
+    "Gold Prickleberry": {
+      "type": "CONSUMABLE",
+      "description": "在台地发现。清除炎热并治愈受伤，但会施加荆棘"
+    },
+    "Granola Bar": {
+      "type": "CONSUMABLE",
+      "description": "在攀登途中各处发现"
+    },
+    "Green Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现"
+    },
+    "Green Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "在大多数生物群系发现。食用2秒后施加中毒"
+    },
+    "Green Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。对使用者施加中毒"
+    },
+    "Green Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。释放孢子，食用后产生有害效果"
+    },
+    "Guidebook": {
+      "type": "EQUIPMENT",
+      "description": "在海岸坠机点发现。教授基础玩法"
+    },
+    "Heat Pack": {
+      "type": "CONSUMABLE",
+      "description": "在高山带发现。清除使用者的寒冷"
+    },
+    "Honeycomb": {
+      "type": "CONSUMABLE",
+      "description": "在热带和根系区打破蜂巢获得"
+    },
+    "Hot Dog": {
+      "type": "CONSUMABLE",
+      "description": "在攀登途中各处发现"
+    },
+    "Jetpack": {
+      "type": "EQUIPMENT",
+      "description": "佩戴后可在燃料耗尽前向上推进侦察兵"
+    },
+    "Lantern": {
+      "type": "EQUIPMENT",
+      "description": "在热带和高山带发现。提供光线并清除寒冷"
+    },
+    "Magic Bean": {
+      "type": "CONSUMABLE",
+      "description": "种植后约3秒长出高达10米的可攀爬藤蔓（若无阻挡）"
+    },
+    "Mandrake": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。拔起时会尖叫。生吃会隐藏耐力条60秒"
+    },
+    "Marshmallow": {
+      "type": "CONSUMABLE",
+      "description": "在攀登途中各处发现。可以在火上烤"
+    },
+    "Medicinal Root": {
+      "type": "CONSUMABLE",
+      "description": "在海岸、热带、根系区和台地发现。清除中毒和孢子，并治愈受伤"
+    },
+    "Megaphone": {
+      "type": "EQUIPMENT",
+      "description": "远距离放大侦察兵的声音"
+    },
+    "Napberry": {
+      "type": "CONSUMABLE",
+      "description": "在高山带发现。施加困倦，并清除除诅咒外的所有状态效果"
+    },
+    "Orange Winterberry": {
+      "type": "CONSUMABLE",
+      "description": "在高山带发现。清除使用者的炎热"
+    },
+    "Pandora's Lunchbox": {
+      "type": "CONSUMABLE",
+      "description": "可使用3次。每次使用随机化使用者的状态效果"
+    },
+    "Parasol": {
+      "type": "EQUIPMENT",
+      "description": "保护侦察兵免受台地阳光照射，手持时减缓下落"
+    },
+    "Pirate's Compass": {
+      "type": "EQUIPMENT",
+      "description": "指向最近的未打开行李或未使用的远古雕像"
+    },
+    "Piton": {
+      "type": "DEPLOYABLE",
+      "description": "附着在可攀爬表面上，为侦察兵提供抓握和休息的支点"
+    },
+    "Portable Stove": {
+      "type": "DEPLOYABLE",
+      "description": "放置后用于烹饪物品。放置后持续60秒"
+    },
+    "Purple Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现"
+    },
+    "Purple Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。释放孢子，食用后产生随机的有益或有害效果"
+    },
+    "Red Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。治愈使用者的受伤"
+    },
+    "Red Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "在大多数生物群系发现"
+    },
+    "Red Prickleberry": {
+      "type": "CONSUMABLE",
+      "description": "在台地发现。清除炎热，但会施加荆棘"
+    },
+    "Red Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。释放孢子，食用后产生有益效果"
+    },
+    "Remedy Fungus": {
+      "type": "CONSUMABLE",
+      "description": "丢弃时释放半径8米的治疗烟雾云"
+    },
+    "Rescue Claw": {
+      "type": "EQUIPMENT",
+      "description": "可使用3次。将使用者拉向地形，或将其他侦察兵拉向使用者"
+    },
+    "RitualDagger": {
+      "type": "MYSTICAL",
+      "description": "在远古行李和雕像中发现。使用后清除使用者的负面状态效果"
+    },
+    "Rocketpack": {
+      "type": "EQUIPMENT",
+      "description": "佩戴后以单次爆发将侦察兵向上发射"
+    },
+    "rope cannon": {
+      "type": "DEPLOYABLE",
+      "description": "发射鱼叉，命中可攀爬表面时垂下可攀爬绳索"
+    },
+    "rope spool": {
+      "type": "DEPLOYABLE",
+      "description": "部署最长10米的可攀爬绳索，可附着在任何可攀爬表面"
+    },
+    "Scorchberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带、根系区和高山带发现。对使用者施加炎热"
+    },
+    "Scorpion": {
+      "type": "MISC",
+      "description": "在台地发现。可以持有但不能放入物品栏位，也不能生吃"
+    },
+    "Scout Cannon": {
+      "type": "DEPLOYABLE",
+      "description": "放置一门大炮，将侦察兵发射到地图各处。发射时造成受伤"
+    },
+    "Scout Cookies": {
+      "type": "CONSUMABLE",
+      "description": "可使用4次"
+    },
+    "Scout Effigy": {
+      "type": "MYSTICAL",
+      "description": "在目标位置复活一名死亡的侦察兵。单人游戏中不会生成"
+    },
+    "Scoutmaster's Bugle": {
+      "type": "MYSTICAL",
+      "description": "为使用者及附近侦察兵提供额外耐力，并召唤侦察队长两分钟"
+    },
+    "SCOUTMASTERSOUL": {
+      "type": "MYSTICAL",
+      "description": "从纳迪尔（Nadir）的气泡中解放。将其带至峰顶可复活侦察队长并解锁隐藏结局"
+    },
+    "ScoutsHonor": {
+      "type": "MYSTICAL",
+      "description": "由峰顶的石像侦察兵持有。使用后将所有玩家传送至纳迪尔"
+    },
+    "Scroll": {
+      "type": "MISC",
+      "description": "在营火处发现。打开后露出一页残页"
+    },
+    "Shelf Fungus": {
+      "type": "DEPLOYABLE",
+      "description": "扔向墙壁时形成平台"
+    },
+    "Skull": {
+      "type": "UNUSED",
+      "description": "未使用物品"
+    },
+    "Small Egg": {
+      "type": "CONSUMABLE",
+      "description": "在暗影之地发现"
+    },
+    "SNOWBALL": {
+      "type": "MISC",
+      "description": "在高山带发现。可以扔向其他侦察兵"
+    },
+    "Sports Drink": {
+      "type": "CONSUMABLE",
+      "description": "清除使用者的大量炎热"
+    },
+    "Stick": {
+      "type": "MISC",
+      "description": "可以投掷或用作生火燃料"
+    },
+    "Stone": {
+      "type": "MISC",
+      "description": "可以捡起并投掷"
+    },
+    "Strange Gem": {
+      "type": "MYSTICAL",
+      "description": "由峰顶的石像侦察兵持有。可以开关，但没有什么实际用途"
+    },
+    "Sunscreen": {
+      "type": "CONSUMABLE",
+      "description": "可使用3次。每次喷雾提供90秒防晒"
+    },
+    "THEBOOKOFBONES": {
+      "type": "MYSTICAL",
+      "description": "使用后对持有者施加诅咒"
+    },
+    "Tick": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。食用后不会施加中毒"
+    },
+    "Torch": {
+      "type": "EQUIPMENT",
+      "description": "仅在台地之墓内部发现。有限时间内提供光线"
+    },
+    "Torn Page": {
+      "type": "MISC",
+      "description": "打开卷轴后显露"
+    },
+    "Trail Mix": {
+      "type": "CONSUMABLE",
+      "description": "在攀登途中各处发现"
+    },
+    "VOIDLAUNCHER": {
+      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "description": "在远古行李和雕像中发现。发射一颗最远40米的虚空球，在其落点反转重力"
+    },
+    "WARP COMPASS": {
+      "type": "MYSTICAL",
+      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得"
+    },
+    "Warp Compass": {
+      "type": "MYSTICAL",
+      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得"
+    },
+    "Warp Fungus": {
+      "type": "MYSTICAL",
+      "description": "投掷后，将使用者传送到其落点"
+    },
+    "Warpsketball": {
+      "type": "UNUSED",
+      "description": "未使用物品"
+    },
+    "Weird Shroom": {
+      "type": "UNUSED",
+      "description": "未使用物品"
+    },
+    "Yellow Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。食用后掉落浆蕉皮"
+    },
+    "Yellow Clusterberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现"
+    },
+    "Yellow Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "在大多数生物群系发现"
+    },
+    "Yellow Kingberry": {
+      "type": "CONSUMABLE",
+      "description": "在热带发现。食用3秒后施加中毒"
+    },
+    "Yellow Shroomberry": {
+      "type": "CONSUMABLE",
+      "description": "在根系区发现。释放孢子，食用后产生有益效果"
+    },
+    "Yellow Winterberry": {
+      "type": "CONSUMABLE",
+      "description": "在高山带发现。清除炎热并治愈受伤"
+    }
+  }
+}
