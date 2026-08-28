@@ -80,7 +80,7 @@
     },
     "Berrynana Peel": {
       "type": "MISC",
-      "description": "食用粉莓蕉后掉落。踩到它的侦察兵会滑倒"
+      "description": "食用莓蕉后掉落。踩到它的侦察兵会滑倒"
     },
     "Big Egg": {
       "type": "CONSUMABLE",
@@ -112,7 +112,7 @@
     },
     "Blue Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落粉莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮"
     },
     "Blue Shroomberry": {
       "type": "CONSUMABLE",
@@ -124,7 +124,7 @@
     },
     "Brown Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落粉莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮"
     },
     "Bugle": {
       "type": "EQUIPMENT",
@@ -515,7 +515,7 @@
     },
     "Yellow Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落粉莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮"
     },
     "Yellow Clusterberry": {
       "type": "CONSUMABLE",
@@ -539,7 +539,7 @@
     },
     "Pink Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落粉莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮"
     }
   }
 }
