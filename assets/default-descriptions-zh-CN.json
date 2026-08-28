@@ -1,13 +1,20 @@
 {
-  "types": { "MYSTICAL": "#B15AD8", "CONSUMABLE": "#7CD64B", "DEPLOYABLE": "#A0764B", "UNUSED": "#2C2C2C", "EQUIPMENT": "FFDA03", "MISC": "#9AA0A6"},
+  "types": {
+    "MYSTICAL": "#B15AD8",
+    "CONSUMABLE": "#7CD64B",
+    "DEPLOYABLE": "#A0764B",
+    "UNUSED": "#2C2C2C",
+    "EQUIPMENT": "FFDA03",
+    "MISC": "#9AA0A6"
+  },
   "items": {
     "Airline Food": {
-      "type":  "CONSUMABLE",
+      "type": "CONSUMABLE",
       "description": "打破普通和大号行李箱获得"
     },
     "Aloe Vera": {
-      "type":  "CONSUMABLE",
-      "description": "在台地发现，使用可消除50点炎热"
+      "type": "CONSUMABLE",
+      "description": "在方山发现，使用可消除50点炎热"
     },
     "AMULET_CLONE": {
       "type": "MYSTICAL",
@@ -27,14 +34,20 @@
     },
     "Ancient Idol": {
       "type": "MYSTICAL",
-      "description": "在台地之墓发现，持有它可使玩家无敌。将其投入窑炉的岩浆中会将其摧毁，并解锁24K徽章"
+      "description": "在沙漠古墓发现，持有它可使玩家无敌。将其投入熔炉的岩浆中会将其摧毁，并解锁24K徽章"
     },
     "anti-rope cannon": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
       "description": "发射一根向上卷绕的7.25米反重力绳索。零重量，丢弃后会漂浮"
     },
     "anti-rope spool": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
       "description": "提供共12.5米可攀爬的反重力绳索，可自定义铺设0.75米至10米长度。绳索会向上漂浮。负重量，丢弃后会漂浮"
     },
     "Antidote": {
@@ -63,15 +76,15 @@
     },
     "Beehive": {
       "type": "MISC",
-      "description": "在热带的树上发现。打破后掉落四个蜂巢块，并放出里面的蜜蜂"
+      "description": "在雨林的树上发现。打破后掉落四个蜂巢块，并放出里面的蜜蜂"
     },
     "Berrynana Peel": {
       "type": "MISC",
-      "description": "食用浆蕉后掉落。踩到它的侦察兵会滑倒"
+      "description": "食用粉莓蕉后掉落。踩到它的侦察兵会滑倒"
     },
     "Big Egg": {
       "type": "CONSUMABLE",
-      "description": "在火山口发现。打破后获得一枚蛋，或小概率获得一只已烤熟的鸟"
+      "description": "在火山发现。打破后获得一枚蛋，或小概率获得一只已烤熟的鸟"
     },
     "Big Lollipop": {
       "type": "CONSUMABLE",
@@ -87,11 +100,11 @@
     },
     "Bird": {
       "type": "CONSUMABLE",
-      "description": "在火山口发现，由蛋孵化。生成时即已烤熟"
+      "description": "在火山发现，由蛋孵化。生成时即已烤熟"
     },
     "Black Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现"
+      "description": "在雨林发现"
     },
     "Blowgun": {
       "type": "MISC",
@@ -99,19 +112,19 @@
     },
     "Blue Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。食用后掉落浆蕉皮"
+      "description": "在雨林发现。食用后掉落粉莓蕉皮"
     },
     "Blue Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。释放孢子，食用后产生有害效果"
+      "description": "在森蕈发现。释放孢子，食用后产生有害效果"
     },
     "Bounce Fungus": {
       "type": "DEPLOYABLE",
-      "description": "在根系区发现。扔向表面时形成弹跳平台"
+      "description": "在森蕈发现。扔向表面时形成弹跳平台"
     },
     "Brown Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。食用后掉落浆蕉皮"
+      "description": "在雨林发现。食用后掉落粉莓蕉皮"
     },
     "Bugle": {
       "type": "EQUIPMENT",
@@ -123,19 +136,19 @@
     },
     "Bugle Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
     },
     "Button Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
     },
     "Cactus": {
       "type": "CONSUMABLE",
-      "description": "在台地发现。对使用者施加荆棘"
+      "description": "在方山发现。对使用者施加荆棘"
     },
     "Candlestick": {
       "type": "EQUIPMENT",
-      "description": "在暗影之地和城堡发现。提供光源"
+      "description": "在雾沼和城塞发现。提供光源"
     },
     "Chain Launcher": {
       "type": "DEPLOYABLE",
@@ -147,7 +160,7 @@
     },
     "Chubby Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带和根系区发现"
+      "description": "在海岸、雨林和森蕈发现"
     },
     "Climbing Chalk": {
       "type": "UNUSED",
@@ -155,15 +168,15 @@
     },
     "Cloud Fungus": {
       "type": "DEPLOYABLE",
-      "description": "在根系区发现。扔向墙壁时形成平台"
+      "description": "在森蕈发现。扔向墙壁时形成平台"
     },
     "Cluster Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带和台地发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
     },
     "Coconut": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带和台地发现。打破后获得两半椰子"
+      "description": "在海岸、雨林和方山发现。打破后获得两半椰子"
     },
     "Coconut Half": {
       "type": "CONSUMABLE",
@@ -187,15 +200,15 @@
     },
     "Dynamite": {
       "type": "MISC",
-      "description": "在台地的地面和行李中发现。短暂引信后引爆，使附近侦察兵受伤"
+      "description": "在方山的地面和行李中发现。短暂引信后引爆，使附近侦察兵受伤"
     },
     "EARLYWORM": {
       "type": "CONSUMABLE",
-      "description": "在暗影之地发现。清除使用者的困倦"
+      "description": "在雾沼发现。清除使用者的困倦"
     },
     "Egg": {
       "type": "CONSUMABLE",
-      "description": "在火山口和暗影之地发现，或由打破大蛋获得"
+      "description": "在火山和雾沼发现，或由打破大蛋获得"
     },
     "Energy Drink": {
       "type": "CONSUMABLE",
@@ -227,7 +240,7 @@
     },
     "Frog": {
       "type": "MISC",
-      "description": "在暗影之地发现。可以捡起并携带"
+      "description": "在雾沼发现。可以捡起并携带"
     },
     "FrogLegs": {
       "type": "CONSUMABLE",
@@ -239,7 +252,7 @@
     },
     "Gold Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "在台地发现。清除炎热并治愈受伤，但会施加荆棘"
+      "description": "在方山发现。清除炎热并治愈受伤，但会施加荆棘"
     },
     "Granola Bar": {
       "type": "CONSUMABLE",
@@ -247,7 +260,7 @@
     },
     "Green Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现"
+      "description": "在雨林发现"
     },
     "Green Crispberry": {
       "type": "CONSUMABLE",
@@ -255,11 +268,11 @@
     },
     "Green Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。对使用者施加中毒"
+      "description": "在雨林发现。对使用者施加中毒"
     },
     "Green Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。释放孢子，食用后产生有害效果"
+      "description": "在森蕈发现。释放孢子，食用后产生有害效果"
     },
     "Guidebook": {
       "type": "EQUIPMENT",
@@ -267,11 +280,11 @@
     },
     "Heat Pack": {
       "type": "CONSUMABLE",
-      "description": "在高山带发现。清除使用者的寒冷"
+      "description": "在雪山发现。清除使用者的寒冷"
     },
     "Honeycomb": {
       "type": "CONSUMABLE",
-      "description": "在热带和根系区打破蜂巢获得"
+      "description": "在雨林和森蕈打破蜂巢获得"
     },
     "Hot Dog": {
       "type": "CONSUMABLE",
@@ -283,7 +296,7 @@
     },
     "Lantern": {
       "type": "EQUIPMENT",
-      "description": "在热带和高山带发现。提供光线并清除寒冷"
+      "description": "在雨林和雪山发现。提供光线并清除寒冷"
     },
     "Magic Bean": {
       "type": "CONSUMABLE",
@@ -291,7 +304,7 @@
     },
     "Mandrake": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。拔起时会尖叫。生吃会隐藏耐力条60秒"
+      "description": "在森蕈发现。拔起时会尖叫。生吃会隐藏耐力条60秒"
     },
     "Marshmallow": {
       "type": "CONSUMABLE",
@@ -299,7 +312,7 @@
     },
     "Medicinal Root": {
       "type": "CONSUMABLE",
-      "description": "在海岸、热带、根系区和台地发现。清除中毒和孢子，并治愈受伤"
+      "description": "在海岸、雨林、森蕈和方山发现。清除中毒和孢子，并治愈受伤"
     },
     "Megaphone": {
       "type": "EQUIPMENT",
@@ -307,11 +320,11 @@
     },
     "Napberry": {
       "type": "CONSUMABLE",
-      "description": "在高山带发现。施加困倦，并清除除诅咒外的所有状态效果"
+      "description": "在雪山发现。施加困倦，并清除除诅咒外的所有状态效果"
     },
     "Orange Winterberry": {
       "type": "CONSUMABLE",
-      "description": "在高山带发现。清除使用者的炎热"
+      "description": "在雪山发现。清除使用者的炎热"
     },
     "Pandora's Lunchbox": {
       "type": "CONSUMABLE",
@@ -319,7 +332,7 @@
     },
     "Parasol": {
       "type": "EQUIPMENT",
-      "description": "保护侦察兵免受台地阳光照射，手持时减缓下落"
+      "description": "保护侦察兵免受方山阳光照射，手持时减缓下落"
     },
     "Pirate's Compass": {
       "type": "EQUIPMENT",
@@ -335,15 +348,15 @@
     },
     "Purple Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现"
+      "description": "在雨林发现"
     },
     "Purple Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。释放孢子，食用后产生随机的有益或有害效果"
+      "description": "在森蕈发现。释放孢子，食用后产生随机的有益或有害效果"
     },
     "Red Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。治愈使用者的受伤"
+      "description": "在雨林发现。治愈使用者的受伤"
     },
     "Red Crispberry": {
       "type": "CONSUMABLE",
@@ -351,11 +364,11 @@
     },
     "Red Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "在台地发现。清除炎热，但会施加荆棘"
+      "description": "在方山发现。清除炎热，但会施加荆棘"
     },
     "Red Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。释放孢子，食用后产生有益效果"
+      "description": "在森蕈发现。释放孢子，食用后产生有益效果"
     },
     "Remedy Fungus": {
       "type": "CONSUMABLE",
@@ -383,11 +396,11 @@
     },
     "Scorchberry": {
       "type": "CONSUMABLE",
-      "description": "在热带、根系区和高山带发现。对使用者施加炎热"
+      "description": "在雨林、森蕈和雪山发现。对使用者施加炎热"
     },
     "Scorpion": {
       "type": "MISC",
-      "description": "在台地发现。可以持有但不能放入物品栏位，也不能生吃"
+      "description": "在方山发现。可以持有但不能放入物品栏位，也不能生吃"
     },
     "Scout Cannon": {
       "type": "DEPLOYABLE",
@@ -407,11 +420,11 @@
     },
     "SCOUTMASTERSOUL": {
       "type": "MYSTICAL",
-      "description": "从纳迪尔（Nadir）的气泡中解放。将其带至峰顶可复活侦察队长并解锁隐藏结局"
+      "description": "从天底的气泡中解放。将其带至峰顶可复活侦察队长并解锁隐藏结局"
     },
     "ScoutsHonor": {
       "type": "MYSTICAL",
-      "description": "由峰顶的石像侦察兵持有。使用后将所有玩家传送至纳迪尔"
+      "description": "由峰顶的石像侦察兵持有。使用后将所有玩家传送至天底"
     },
     "Scroll": {
       "type": "MISC",
@@ -427,11 +440,11 @@
     },
     "Small Egg": {
       "type": "CONSUMABLE",
-      "description": "在暗影之地发现"
+      "description": "在雾沼发现"
     },
     "SNOWBALL": {
       "type": "MISC",
-      "description": "在高山带发现。可以扔向其他侦察兵"
+      "description": "在雪山发现。可以扔向其他侦察兵"
     },
     "Sports Drink": {
       "type": "CONSUMABLE",
@@ -459,11 +472,11 @@
     },
     "Tick": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。食用后不会施加中毒"
+      "description": "在雨林发现。食用后不会施加中毒"
     },
     "Torch": {
       "type": "EQUIPMENT",
-      "description": "仅在台地之墓内部发现。有限时间内提供光线"
+      "description": "仅在沙漠古墓内部发现。有限时间内提供光线"
     },
     "Torn Page": {
       "type": "MISC",
@@ -474,7 +487,10 @@
       "description": "在攀登途中各处发现"
     },
     "VOIDLAUNCHER": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
       "description": "在远古行李和雕像中发现。发射一颗最远40米的虚空球，在其落点反转重力"
     },
     "WARP COMPASS": {
@@ -499,11 +515,11 @@
     },
     "Yellow Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。食用后掉落浆蕉皮"
+      "description": "在雨林发现。食用后掉落粉莓蕉皮"
     },
     "Yellow Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现"
+      "description": "在雨林发现"
     },
     "Yellow Crispberry": {
       "type": "CONSUMABLE",
@@ -511,15 +527,19 @@
     },
     "Yellow Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在热带发现。食用3秒后施加中毒"
+      "description": "在雨林发现。食用3秒后施加中毒"
     },
     "Yellow Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在根系区发现。释放孢子，食用后产生有益效果"
+      "description": "在森蕈发现。释放孢子，食用后产生有益效果"
     },
     "Yellow Winterberry": {
       "type": "CONSUMABLE",
-      "description": "在高山带发现。清除炎热并治愈受伤"
+      "description": "在雪山发现。清除炎热并治愈受伤"
+    },
+    "Pink Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "在雨林发现。食用后掉落粉莓蕉皮"
     }
   }
 }

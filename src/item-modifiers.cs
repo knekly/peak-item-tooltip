@@ -195,6 +195,7 @@ namespace PeakItemTooltip
                 case "on land":    return "落地时";
                 case "on heal":    return "治疗时";
                 case "on burn":    return "燃烧时";
+                case "mystical":   return "神秘";
                 default: return qualifier;
             }
         }
