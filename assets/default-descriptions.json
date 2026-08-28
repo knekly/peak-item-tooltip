@@ -321,6 +321,10 @@
       "type": "EQUIPMENT",
       "description": "Protects the scout from the mesa's sunlight, and slows a fall when held"
     },
+    "Pink Berrynana": {
+      "type": "CONSUMABLE",
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+    },
     "Pirate's Compass": {
       "type": "EQUIPMENT",
       "description": "Points to the nearest unopened luggage or unused Ancient Statue"

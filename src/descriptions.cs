@@ -123,18 +123,64 @@ namespace PeakItemTooltip
         public string Path_ => _path;
 
         /**
-         * @brief creates the description file from the embedded default if it does not exist, then loads it
+         * @brief creates the description file from the embedded default if it does not exist;
+         *        updates an existing description file with new entries (if there are), then load it
+         *        one up with the entries added since it was written, then loads it
          */
         public void Initialize()
         {
             try
             {
+                string defaults = LoadEmbeddedDefault();
+
+                // if the file doesn't exist, write new description file with embedded default
                 if (!File.Exists(_path))
                 {
-                    // if our default description file cannot be read, then fallback to DefaultFileContents
-                    string contents = LoadEmbeddedDefault() ?? DefaultFileContents;
-                    File.WriteAllText(_path, contents);
+                    // if the embedded default description file cannot be read, then fallback to DefaultFileContents
+                    File.WriteAllText(_path, defaults ?? DefaultFileContents);
                     Plugin.Log.LogInfo($"Created description file at {_path}");
+                }
+                // if the description file already exists
+                else if (defaults != null)
+                {
+                    // read user's existing description file
+                    JObject file = JObject.Parse(File.ReadAllText(_path));
+                    // read the new embedded default description file
+                    JObject baseline = JObject.Parse(defaults);
+                    // accumulator
+                    var added = new List<string>();
+
+                    foreach (string section in new[] { "types", "items" })
+                    {
+                        var source = baseline[section] as JObject;
+                        if (source == null) continue;
+
+                        // user existing description file lookup
+                        var target = file[section] as JObject;
+                        // if a section does not exist, copy the new section over from baseline
+                        if (target == null)
+                        {
+                            file[section] = source.DeepClone();
+                            added.Add(section);
+                            continue;
+                        }
+
+                        var present = new HashSet<string>(target.Properties().Select(p => p.Name), StringComparer.OrdinalIgnoreCase);
+                        foreach (JProperty prop in source.Properties())
+                        {
+                            if (!present.Add(prop.Name)) continue;
+
+                            target[prop.Name] = prop.Value.DeepClone();
+                            added.Add(prop.Name);
+                        }
+                    }
+
+                    // rewrite the description file if any change is detected
+                    if (added.Count > 0)
+                    {
+                        File.WriteAllText(_path, file.ToString(Formatting.Indented));
+                        Plugin.Log.LogInfo($"Added {added.Count} new entries to {Path.GetFileName(_path)}: {string.Join(", ", added)}");
+                    }
                 }
             }
             catch (Exception e)

@@ -1,0 +1,17 @@
+# build output
+bin/
+obj/
+*.user
+
+# visual studio / rider / vs code
+.vs/
+.idea/
+.vscode/
+
+# thunderstore packaging
+*.zip
+
+# os
+Thumbs.db
+desktop.ini
+.DS_Store
