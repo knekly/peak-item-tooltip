@@ -1,0 +1,25 @@
+{
+  "types": {
+    "CONSUMABLE": "#F2C43D"
+  },
+  "items": {
+    "Green Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "默认中文生食描述。",
+      "context": "在雨林发现。",
+      "stateDescriptions": {
+        "raw": "生食可能导致中毒。",
+        "cooked": "烹饪后会去除中毒。"
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": ["Poison"]
+        }
+      },
+      "wiki": {
+        "title": "Green Crispberry",
+        "revision": 10035
+      }
+    }
+  }
+}

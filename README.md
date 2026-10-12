@@ -11,6 +11,7 @@
 ***
 ### 👉🏻 features
 - read an item's type, description and status effects when you hold or hover an item. simplified chinese translations are available thanks to **@Gintoki000** 🎉
+- modifier lines use the item's current values and skip disabled effect components, including effects removed by cooking. Items with reviewed Wiki cooking data can show stage-specific effects alongside location and acquisition context; incomplete entries remain tracked in `assets/wiki-page-manifest.json`.
 
 <img width="1200" height="400" alt="item tooltip previews" src="https://github.com/user-attachments/assets/61b37fa2-c299-44a0-9693-51fe7454c6a8" />
 

@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="../src/item-modifiers.cs" Link="item-modifiers.cs" />
+    <Compile Include="../src/item-description.cs" Link="item-description.cs" />
+    <Compile Include="../src/description-defaults-merger.cs" Link="description-defaults-merger.cs" />
+    <Compile Include="../src/descriptions.cs" Link="descriptions.cs" />
+    <EmbeddedResource Include="Fixtures/default-descriptions.json" />
+    <EmbeddedResource Include="Fixtures/default-descriptions-zh-CN.json" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" GeneratePathProperty="true" ExcludeAssets="compile;runtime" />
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(PkgNewtonsoft_Json)\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+  </ItemGroup>
+</Project>

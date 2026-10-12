@@ -18,6 +18,11 @@
     <BepInExCore>$(GameDir)\BepInEx\core</BepInExCore>
   </PropertyGroup>
 
+  <!-- standalone regression harness is not part of the mod -->
+  <ItemGroup>
+    <Compile Remove="tests/**/*.cs" />
+  </ItemGroup>
+
   <!-- curated defaults baked into the dll; written out on first run -->
     <ItemGroup>
 	    <EmbeddedResource Include="assets/default-descriptions-zh-CN.json" />

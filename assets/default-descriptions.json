@@ -1,529 +1,1571 @@
 {
-  "types": { "MYSTICAL": "#B15AD8", "CONSUMABLE": "#7CD64B", "DEPLOYABLE": "#A0764B", "UNUSED": "#2C2C2C", "EQUIPMENT": "FFDA03", "MISC": "#9AA0A6"},
+  "types": {
+    "MYSTICAL": "#B15AD8",
+    "CONSUMABLE": "#7CD64B",
+    "DEPLOYABLE": "#A0764B",
+    "UNUSED": "#2C2C2C",
+    "EQUIPMENT": "FFDA03",
+    "MISC": "#9AA0A6"
+  },
   "items": {
     "Airline Food": {
-      "type":  "CONSUMABLE",
-      "description": "Found by breaking open regular and large luggages"
+      "type": "CONSUMABLE",
+      "description": "Found by breaking open regular and large luggages",
+      "wiki": {
+        "title": "Airline Food",
+        "revision": 10056,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Aloe Vera": {
-      "type":  "CONSUMABLE",
-      "description": "Found in the mesa, using it will remove 50 heat"
+      "type": "CONSUMABLE",
+      "description": "Found in the Mesa; using it reduces Heat.",
+      "wiki": {
+        "title": "Aloe Vera",
+        "revision": 7230,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "AMULET_CLONE": {
       "type": "MYSTICAL",
-      "description": "On use, duplicate an item. Duplicated items will have the same number of uses available as the original item. Amulets and checkpoint flags cannot be duplicated"
+      "description": "On use, duplicate an item. Duplicated items will have the same number of uses available as the original item. Amulets and checkpoint flags cannot be duplicated",
+      "wiki": {
+        "title": "Scout's Generosity",
+        "revision": 11880,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_DOUBLEJUMP": {
       "type": "MYSTICAL",
-      "description": "On use, apply slow falling for .55 seconds and all scouts within 12.8 metres, then apply 3 seconds of wind walk (low gravity) for all affected scouts"
+      "description": "Using it briefly grants nearby scouts Slow Fall, followed by Wind Walk for low-gravity movement.",
+      "wiki": {
+        "title": "Scout's Initiative",
+        "revision": 11881,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_HEALING": {
       "type": "MYSTICAL",
-      "description": "On use, heals various negative status effects and applies invincibility for 10 seconds"
+      "description": "Using it heals several negative statuses and grants temporary invulnerability.",
+      "wiki": {
+        "title": "Scout's Tenacity",
+        "revision": 11882,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_INFINITESTAM": {
       "type": "MYSTICAL",
-      "description": "On use, a yellow bubble is formed for 8 seconds around the player with a range of 9.6 metres, granting infinite stamina to the player and all scouts within the bubble"
+      "description": "Using it creates a temporary yellow bubble that grants infinite stamina to the user and other scouts inside.",
+      "wiki": {
+        "title": "Scout's Ambition",
+        "revision": 11879,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "Ancient Idol": {
       "type": "MYSTICAL",
-      "description": "Found in Mesa's Tomb, holding it grants the player invincibility. Throwing it into the lava of the kiln destroys it and unlocks the 24 Karat Badge"
+      "description": "Found in the Mesa Tomb after completing its challenge. Holding it grants invincibility and prevents Bonus stamina use; picking it up grants Esoterica. Throwing it into lava in the Kiln or Citadel unlocks 24 Karat.",
+      "wiki": {
+        "title": "Ancient Idol",
+        "revision": 11788,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "anti-rope cannon": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
-      "description": "Attaches a 7.25 metre anti-rope which spools upwards. It has zero weight and will float when dropped"
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
+      "description": "Attaches a 7.25 metre anti-rope which spools upwards. It has zero weight and will float when dropped. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Anti-Rope Cannon",
+        "revision": 7368,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "anti-rope spool": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
-      "description": "Provides a total of 12.5 metres climbable anti gravity rope, placeable in custom lengths from 0.75m to 10m long. The rope will float upwards. It has negative weight and will float when dropped"
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
+      "description": "Provides a total of 12.5 metres climbable anti gravity rope, placeable in custom lengths from 0.75m to 10m long. The rope will float upwards. It has negative weight and will float when dropped. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Anti-Rope Spool",
+        "revision": 12044,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Antidote": {
       "type": "CONSUMABLE",
-      "description": "Can be used up to 3 times. Cooking or throwing will cause it to shatter, removing up to 20 Poison and Spores from players within 4.8 metres depending on distance"
+      "description": "Up to three uses. Throwing shatters it and removes Poison and Spores from nearby players. After cooking, using it releases a small antidote cloud without knockback.",
+      "wiki": {
+        "title": "Antidote",
+        "revision": 12007,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "AUTOPARACHUTE": {
       "type": "UNUSED",
-      "description": "Unused item"
+      "description": "Unused content: a blue, one-use parachute that deploys automatically during a fall to prevent fall damage."
     },
     "Backpack": {
       "type": "EQUIPMENT",
-      "description": "Occupies the player's fourth inventory slot and provides four additional storage slots"
+      "description": "Occupies the fourth inventory slot and provides four additional storage slots. Cooking changes its appearance only; it can still store items after repeated incineration.",
+      "wiki": {
+        "title": "Backpack",
+        "revision": 11786,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Balloon": {
       "type": "CONSUMABLE",
-      "description": "On use, attaches a single ballon to the player. Dropping it causes it to fly away. Each attached ballon reduces gravity by 18%, with 6 or more granting an additional 100% reduction, causing them to fly upwards until popped (2 minutes or until the player ascends 160 metres)"
+      "description": "Attaches a balloon that reduces gravity; multiple balloons can lift the player upward. Balloons pop after a limited time or ascent, and fly away when dropped. Cooking pops the balloon and makes it unusable.",
+      "wiki": {
+        "title": "Balloon",
+        "revision": 10913,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Balloon Bunch": {
       "type": "CONSUMABLE",
-      "description": "On use, attaches a bunch of balloons to the player, reducing gravity by 54% for 2 minutes or until 100 metres have been ascended. Dropping it causes it to fly away"
+      "description": "Attaches a bunch of balloons that reduces gravity. It pops after a limited time or ascent and flies away when dropped. Cooking pops the balloons and makes them unusable.",
+      "wiki": {
+        "title": "Balloon Bunch",
+        "revision": 9047,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Bandages": {
       "type": "CONSUMABLE",
-      "description": "Single-use. Heals injury on the user"
+      "description": "Single-use. Heals injury on the user. Cooking changes its appearance only; its use effect is unchanged.",
+      "wiki": {
+        "title": "Bandages",
+        "revision": 11408,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Beehive": {
       "type": "MISC",
-      "description": "Found in trees in the tropics. Breaking it open drops four Honeycombs and releases the bees inside"
+      "description": "Found in trees in the tropics. Breaking it open drops four Honeycombs and releases the bees inside. The cooking stage transfers to the Honeycombs inside when the hive breaks.",
+      "wiki": {
+        "title": "Beehive",
+        "revision": 11925,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Berrynana Peel": {
       "type": "MISC",
-      "description": "Dropped after eating a Berrynana. Scouts who step on it will slip"
+      "description": "Dropped after eating a Berrynana; stepping on it makes scouts slip and briefly fall."
     },
     "Big Egg": {
       "type": "CONSUMABLE",
-      "description": "Found in the caldera. Breaking it open yields an Egg, or rarely a pre-cooked Bird"
+      "description": "Found in nests on rocks in the Caldera. Cracking it usually yields an Egg and occasionally a pre-cooked Bird. The Egg inherits the Big Egg's cooking stage; the bird result has an exception and cannot be inferred directly from that stage.",
+      "wiki": {
+        "title": "Big Egg",
+        "revision": 11612,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Big Lollipop": {
       "type": "CONSUMABLE",
-      "description": "Grants infinite stamina to the user while being eaten"
+      "description": "Found in luggage. Grants infinite stamina while being eaten; when uncooked, the effect is followed by Drowsy. The cooked or well-done stage removes this Drowsy penalty.",
+      "wiki": {
+        "title": "Big Lollipop",
+        "revision": 10558,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Bing Bong": {
       "type": "MISC",
-      "description": "BING BONG!"
+      "description": "BING BONG! Cooking lowers the pitch and volume of its voice lines; incineration silences it.",
+      "wiki": {
+        "title": "Bing Bong",
+        "revision": 12099,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Binoculars": {
       "type": "EQUIPMENT",
-      "description": "Held to zoom in and view distant terrain"
+      "description": "Held to zoom in and view distant terrain",
+      "wiki": {
+        "title": "Binoculars",
+        "revision": 12142,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bird": {
       "type": "CONSUMABLE",
-      "description": "Found in the caldera, hatched from eggs. Spawns pre-cooked"
+      "description": "A rare result from cracking Big Eggs or Small Eggs, normally spawning already cooked. Cooking it to well-done does not improve its effects. Burning reduces Hunger restoration and removes Bonus Stamina; further incineration adds Poison.",
+      "wiki": {
+        "title": "Cooked Bird",
+        "revision": 11126,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Black Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics"
+      "description": "Found in the tropics",
+      "wiki": {
+        "title": "Black Clusterberry",
+        "revision": 10046,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Blowgun": {
       "type": "MISC",
-      "description": "Fires darts at other scouts. Does not spawn in solo play"
+      "description": "Fires darts at other scouts; it does not spawn in solo play. Uncooked darts apply Drowsy; cooking changes that effect to Heat.",
+      "wiki": {
+        "title": "Blowgun",
+        "revision": 11563,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Blue Berrynana": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten",
+      "wiki": {
+        "title": "Blue Berrynana",
+        "revision": 10040,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Blue Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Releases spores, and produces a harmful effect when eaten"
+      "description": "Found in the Roots. Eating it raw releases Spores and may cause a random harmful effect. The cooked or well-done stage removes its original Spores; this does not establish that every harmful effect is removed.",
+      "wiki": {
+        "title": "Blue Shroomberry",
+        "revision": 10680,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Bounce Fungus": {
       "type": "DEPLOYABLE",
-      "description": "Found in the roots. Creates a bouncy platform when thrown at a surface"
+      "description": "Found in the roots. Creates a bouncy platform when thrown at a surface",
+      "wiki": {
+        "title": "Bounce Fungus",
+        "revision": 7626,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Brown Berrynana": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten",
+      "wiki": {
+        "title": "Brown Berrynana",
+        "revision": 11312,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bugle": {
       "type": "EQUIPMENT",
-      "description": "Found at the photobooth and crash site. Plays a musical note when used"
+      "description": "Found at the photobooth and crash site. Plays a musical note when used. Each cooking makes its pitch wobble more.",
+      "wiki": {
+        "title": "Bugle",
+        "revision": 11284,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Bugle of Friendship": {
       "type": "MYSTICAL",
-      "description": "While played, grants all scouts in a large radius infinite stamina, up to a total of 7.5 seconds"
+      "description": "Grants nearby scouts infinite stamina while played; it can only be played for a limited time.",
+      "wiki": {
+        "title": "Bugle of Friendship",
+        "revision": 11947,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bugle Shroom": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+      "description": "Found in the Shore, Tropics, Roots, and Mesa; some varieties are poisonous. Cooking does not remove Poison from poisonous mushroom varieties.",
+      "wiki": {
+        "title": "Bugle Shroom",
+        "revision": 11906,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Button Shroom": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+      "description": "Found in the Shore, Tropics, Roots, and Mesa; some varieties are poisonous. Cooking does not remove Poison from poisonous mushroom varieties.",
+      "wiki": {
+        "title": "Button Shroom",
+        "revision": 11909,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Cactus": {
       "type": "CONSUMABLE",
-      "description": "Found in the mesa. Afflicts thorns onto the user"
+      "description": "Found in the mesa. Afflicts thorns onto the user",
+      "wiki": {
+        "title": "Cactus",
+        "revision": 7704,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Candlestick": {
       "type": "EQUIPMENT",
-      "description": "Found in the gloom and the Citadel. Provides a source of light"
+      "description": "Found in the gloom and the Citadel. Provides a source of light",
+      "wiki": {
+        "title": "Candlestick",
+        "revision": 10763,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Chain Launcher": {
       "type": "DEPLOYABLE",
-      "description": "Creates a climbable chain between two points"
+      "description": "Creates a climbable chain between two points. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Chain Launcher",
+        "revision": 7654,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Checkpoint Flag": {
       "type": "DEPLOYABLE",
-      "description": "Places a single-use respawn checkpoint for the scout who placed it"
+      "description": "Places a single-use respawn checkpoint for the scout who placed it. Only explosives can cook this flag, and each explosion advances its cooking stage by two. Cooking adds a Bonus stamina effect when it is used.",
+      "wiki": {
+        "title": "Checkpoint Flag",
+        "revision": 11239,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Chubby Shroom": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics and roots"
+      "description": "Found on the shore, tropics and roots",
+      "wiki": {
+        "title": "Chubby Shroom",
+        "revision": 11907,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Climbing Chalk": {
       "type": "UNUSED",
-      "description": "Unused item"
+      "description": "Unused content with no model or texture; the Wiki documents a temporary reduction in climbing stamina use."
     },
     "Cloud Fungus": {
       "type": "DEPLOYABLE",
-      "description": "Found in the roots. Creates a platform when thrown at a wall"
+      "description": "Found in the roots. Creates a platform when thrown at a wall",
+      "wiki": {
+        "title": "Cloud Fungus",
+        "revision": 11182,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Cluster Shroom": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics and mesa. Some variants afflict poison after 10 seconds"
+      "description": "Found in the Shore, Tropics, Roots, and Mesa; some varieties are poisonous. Cooking does not remove Poison from poisonous mushroom varieties.",
+      "wiki": {
+        "title": "Cluster Shroom",
+        "revision": 11908,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Coconut": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics and mesa. Breaking it yields two Coconut Halves"
+      "description": "Found on the shore, tropics and mesa. Breaking it yields two Coconut Halves. Cooking it produces cooked Half-Coconuts.",
+      "wiki": {
+        "title": "Coconut",
+        "revision": 12013,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Coconut Half": {
       "type": "CONSUMABLE",
-      "description": "Created by breaking a Coconut"
+      "description": "Obtained by splitting a Coconut; eating it reduces Heat. The cooked or well-done stage improves Hunger restoration and provides Bonus Stamina.",
+      "wiki": {
+        "title": "Half-Coconut",
+        "revision": 9542,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Compass": {
       "type": "EQUIPMENT",
-      "description": "Found at the shore crash site. Points towards the PEAK"
+      "description": "Found at the shore crash site. Points towards the PEAK",
+      "wiki": {
+        "title": "Compass",
+        "revision": 5463,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Conch": {
       "type": "MISC",
-      "description": "Found on the shore. Can be thrown, but serves little other purpose"
+      "description": "Found on the shore. Can be thrown, but serves little other purpose",
+      "wiki": {
+        "title": "Conch",
+        "revision": 11368,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; visual-only-cooking; in-game-validation-pending"
+      }
     },
     "Cure-All": {
       "type": "CONSUMABLE",
-      "description": "On use, removes nearly every negative status effect from the user"
+      "description": "On use, removes nearly every negative status effect from the user. When used after cooking, it explodes into a small healing cloud without knockback.",
+      "wiki": {
+        "title": "Cure-All",
+        "revision": 12012,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Cursed Skull": {
       "type": "MYSTICAL",
-      "description": "On use, instantly kills the scout holding it and grants bonus stamina to other players"
+      "description": "On use, instantly kills the scout holding it and grants bonus stamina to other players. Cooking activates it immediately, then triggers a dynamite-like explosion.",
+      "wiki": {
+        "title": "Cursed Skull",
+        "revision": 11558,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Dynamite": {
       "type": "MISC",
-      "description": "Found on the ground and in luggage in the mesa. Detonates after a short fuse, afflicting injury to nearby scouts"
+      "description": "Found on the ground and in luggage in the mesa. Detonates after a short fuse, afflicting injury to nearby scouts. Cooking makes it explode immediately.",
+      "wiki": {
+        "title": "Dynamite",
+        "revision": 11396,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "EARLYWORM": {
       "type": "CONSUMABLE",
-      "description": "Found in the gloom. Removes drowsiness from the user"
+      "description": "Found on the ground in the Gloom; eating it clears Drowsy and grants the Well Rested badge. Cooking stops it moving but adds no Bonus Stamina. Burning reduces Hunger restoration; further incineration increases Poison when eaten.",
+      "wiki": {
+        "title": "The Early Worm",
+        "revision": 11896,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Egg": {
       "type": "CONSUMABLE",
-      "description": "Found in the caldera and gloom, or produced by breaking a Big Egg"
+      "description": "Found in the caldera and gloom, or produced by breaking a Big Egg",
+      "wiki": {
+        "title": "Egg",
+        "revision": 11625,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Energy Drink": {
       "type": "CONSUMABLE",
-      "description": "Grants a temporary speed boost and afflicts drowsiness"
+      "description": "Found in luggage; drinking it temporarily boosts movement speed. When uncooked, Drowsy follows the boost. At the cooked or well-done stage, drinking it causes an explosion that knocks back nearby players, extends the speed boost, and adds no new Drowsy afterward.",
+      "wiki": {
+        "title": "Energy Drink",
+        "revision": 11234,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Drowsy"
+          ]
+        }
+      }
     },
     "Faerie Lantern": {
       "type": "MYSTICAL",
-      "description": "Removes several negative status effects from the user over 30 seconds"
+      "description": "When uncooked, using it gradually removes several negative statuses from the user. After cooking, using it causes an explosion and releases a small healing cloud.",
+      "wiki": {
+        "title": "Faerie Lantern",
+        "revision": 11089,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Fannypack": {
       "type": "EQUIPMENT",
-      "description": "Worn to provide additional storage slots"
+      "description": "Worn to provide additional storage slots",
+      "wiki": {
+        "title": "Fanny Pack",
+        "revision": 12084,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "First Aid Kit": {
       "type": "CONSUMABLE",
-      "description": "Takes 5 seconds to use. Removes poison and spores, and heals injury"
+      "description": "Takes 5 seconds to use. Removes poison and spores, and heals injury. Cooking changes its appearance only; its use effect is unchanged.",
+      "wiki": {
+        "title": "First Aid Kit",
+        "revision": 11223,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Flare": {
       "type": "EQUIPMENT",
-      "description": "Found at the crash site and peak. Summons the rescue helicopter when used at the PEAK"
+      "description": "Found at the crash site and peak. Summons the rescue helicopter when used at the PEAK. Cooking makes it explode, injuring scouts in a small radius.",
+      "wiki": {
+        "title": "Flare",
+        "revision": 9540,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Fortified Milk": {
       "type": "CONSUMABLE",
-      "description": "Removes heat from the user"
+      "description": "Found in luggage; drinking it reduces Heat and grants temporary invulnerability. The first cooking stage extends the invulnerability duration; further cooking does not extend it again.",
+      "wiki": {
+        "title": "Fortified Milk",
+        "revision": 11633,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Frisbee": {
       "type": "MISC",
-      "description": "Thrown through the air, and can bonk other scouts"
+      "description": "Thrown through the air, and can bonk other scouts",
+      "wiki": {
+        "title": "Flying Disc",
+        "revision": 12008,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Frog": {
       "type": "MISC",
-      "description": "Found in the gloom. Can be picked up and carried"
+      "description": "Found in the gloom. Can be picked up and carried. Cooking transforms it into Frog Legs.",
+      "wiki": {
+        "title": "Frog",
+        "revision": 12141,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "FrogLegs": {
       "type": "CONSUMABLE",
-      "description": "Harvested from a Frog"
+      "description": "Obtained by cooking a Frog. It spawns already cooked in normal play; raw Frog Legs are not normally obtainable. The cooked or well-done stage restores Hunger and provides Bonus Stamina.",
+      "wiki": {
+        "title": "Frog Legs",
+        "revision": 11161,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Glider": {
       "type": "EQUIPMENT",
-      "description": "Held while falling to glide slowly and steer through the air"
+      "description": "Held while falling to glide slowly and steer through the air",
+      "wiki": {
+        "title": "Glider",
+        "revision": 11997,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; visual-only-cooking; in-game-validation-pending"
+      }
     },
     "Gold Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the mesa. Removes heat and heals injury, but afflicts thorns"
+      "description": "Found in the Mesa. Eating it raw reduces Heat and heals Injury but applies Thorns; whether cooking removes Thorns remains unverified."
     },
     "Granola Bar": {
       "type": "CONSUMABLE",
-      "description": "Found throughout the climb"
+      "description": "Found throughout the climb",
+      "wiki": {
+        "title": "Granola Bar",
+        "revision": 10052,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Green Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics"
+      "description": "Unused item. The Wiki reports Hunger restoration and Poison removal; cooking behavior is undocumented."
     },
     "Green Crispberry": {
       "type": "CONSUMABLE",
-      "description": "Found across most biomes. Afflicts poison 2 seconds after eating"
+      "description": "Found mainly on bushes in the Shore and Tropics, occasionally elsewhere. Eating it raw causes delayed Poison. Cooked and well-done stages remove its original Poison and have the same effects. Burning reduces Hunger restoration and removes Bonus Stamina; further incineration increases Poison.",
+      "wiki": {
+        "title": "Green Crispberry",
+        "revision": 10035,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-and-game-code-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        },
+        "burnt": {
+          "mustNotHaveActive": [
+            "ExtraStamina"
+          ]
+        }
+      }
     },
     "Green Kingberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Afflicts poison onto the user"
+      "description": "Found on trees in the Tropics. Eating it raw causes immediate Poison; the cooked or well-done stage removes its original Poison.",
+      "wiki": {
+        "title": "Green Kingberry",
+        "revision": 10039,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     },
     "Green Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Releases spores, and produces a harmful effect when eaten"
+      "description": "Found in the Roots. Eating it raw releases Spores and may cause a random harmful effect. The cooked or well-done stage removes its original Spores; this does not establish that every harmful effect is removed.",
+      "wiki": {
+        "title": "Green Shroomberry",
+        "revision": 10678,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Guidebook": {
       "type": "EQUIPMENT",
-      "description": "Found at the shore crash site. Teaches basic gameplay"
+      "description": "Found at the shore crash site. Teaches basic gameplay. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Guidebook",
+        "revision": 11331,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Heat Pack": {
       "type": "CONSUMABLE",
-      "description": "Found in the alpine. Removes cold from the user"
+      "description": "Found in the alpine. Removes cold from the user. Cooking makes it explode, injuring scouts in a small radius.",
+      "wiki": {
+        "title": "Heat Pack",
+        "revision": 10957,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Honeycomb": {
       "type": "CONSUMABLE",
-      "description": "Obtained by breaking a Beehive in the tropics and roots"
+      "description": "Obtained by breaking a Beehive in the tropics and roots",
+      "wiki": {
+        "title": "Honeycomb",
+        "revision": 9543,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Hot Dog": {
       "type": "CONSUMABLE",
-      "description": "Found throughout the climb"
+      "description": "Found at campfires or disguised as a cattail in the Gloom.",
+      "wiki": {
+        "title": "Hot Dog",
+        "revision": 11165,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Jetpack": {
       "type": "EQUIPMENT",
-      "description": "Worn to propel the scout upwards while its fuel lasts"
+      "description": "Worn to propel the scout upwards while its fuel lasts",
+      "wiki": {
+        "title": "Jetpack",
+        "revision": 11898,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Lantern": {
       "type": "EQUIPMENT",
-      "description": "Found in the tropics and alpine. Provides light and removes cold"
+      "description": "Found in the tropics and alpine. Provides light and removes cold. Cooking makes it explode, injuring scouts in a small radius.",
+      "wiki": {
+        "title": "Lantern",
+        "revision": 11374,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Magic Bean": {
       "type": "CONSUMABLE",
-      "description": "Grows a climbable vine up to 10 metres tall roughly 3 seconds after being planted, if unobstructed"
+      "description": "Grows a climbable vine up to 10 metres tall roughly 3 seconds after being planted, if unobstructed",
+      "wiki": {
+        "title": "Magic Bean",
+        "revision": 9536,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Mandrake": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Screams when uprooted. Eaten raw, it hides the stamina bar for 60 seconds"
+      "description": "Found in the Roots; it screams when uprooted. Eating it raw temporarily hides the Stamina bar. Cooking stops the scream, and eating it cooked removes Curse.",
+      "wiki": {
+        "title": "Mandrake",
+        "revision": 11458,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Marshmallow": {
       "type": "CONSUMABLE",
-      "description": "Found throughout the climb. Can be roasted over a fire"
+      "description": "Found near campfires.",
+      "wiki": {
+        "title": "Marshmallow",
+        "revision": 9532,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Medicinal Root": {
       "type": "CONSUMABLE",
-      "description": "Found on the shore, tropics, roots and mesa. Removes poison and spores, and heals injury"
+      "description": "Found in the Shore, Tropics, Roots, and Mesa; using it removes Poison and Spores and heals Injury. Cooking removes additional Poison and Spores.",
+      "wiki": {
+        "title": "Medicinal Root",
+        "revision": 11876,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Megaphone": {
       "type": "EQUIPMENT",
-      "description": "Amplifies the scout's voice over a long distance"
+      "description": "Unused content; the Wiki presents voice-range amplification as a possibility, not a confirmed effect."
     },
     "Napberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the alpine. Afflicts drowsiness, and removes all status effects except curse"
+      "description": "Found in Alpine caves. Eating it clears most status effects except Curse and Petrify, but causes severe Drowsiness and temporarily knocks the user out.",
+      "wiki": {
+        "title": "Napberry",
+        "revision": 12085,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Orange Winterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the alpine. Removes heat from the user"
+      "description": "Found in the alpine. Removes heat from the user",
+      "wiki": {
+        "title": "Orange Winterberry",
+        "revision": 10045,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Pandora's Lunchbox": {
       "type": "CONSUMABLE",
-      "description": "Can be used 3 times. Each use randomizes the user's status effects"
+      "description": "Up to three uses. When uncooked, each use randomizes the user's status effects. Using it after cooking causes an explosion and applies random effects to nearby players without knockback.",
+      "wiki": {
+        "title": "Pandora's Lunchbox",
+        "revision": 11410,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Parasol": {
       "type": "EQUIPMENT",
-      "description": "Protects the scout from the mesa's sunlight, and slows a fall when held"
+      "description": "Protects the scout from the mesa's sunlight, and slows a fall when held",
+      "wiki": {
+        "title": "Parasol",
+        "revision": 11946,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Pink Berrynana": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+      "description": "Found on vines in the tropics. Eating it drops a Berrynana Peel; eating it raw causes Poison, while the cooked or well-done stage removes its original Poison effect.",
+      "wiki": {
+        "title": "Pink Berrynana",
+        "revision": 10041,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     },
     "Pirate's Compass": {
       "type": "EQUIPMENT",
-      "description": "Points to the nearest unopened luggage or unused Ancient Statue"
+      "description": "Points to the nearest unopened luggage or unused Ancient Statue",
+      "wiki": {
+        "title": "Pirate's Compass",
+        "revision": 7278,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Piton": {
       "type": "DEPLOYABLE",
-      "description": "Attaches to a climbable surface, providing a point for scouts to grab and rest"
+      "description": "Attaches to a climbable surface, providing a point for scouts to grab and rest. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Piton",
+        "revision": 10767,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Portable Stove": {
       "type": "DEPLOYABLE",
-      "description": "Placed to cook items. Lasts 60 seconds after being placed"
+      "description": "Placed to cook items. Lasts 60 seconds after being placed. Cooking makes it explode, injuring scouts in a small radius.",
+      "wiki": {
+        "title": "Portable Stove",
+        "revision": 10988,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Purple Kingberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics"
+      "description": "Found in the tropics",
+      "wiki": {
+        "title": "Purple Kingberry",
+        "revision": 10037,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Purple Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Releases spores, and produces a random good or bad effect when eaten"
+      "description": "Found in the Roots. Eating it raw releases Spores and may cause a random beneficial or harmful effect. The cooked or well-done stage removes its original Spores; this does not establish that random effects are removed.",
+      "wiki": {
+        "title": "Purple Shroomberry",
+        "revision": 11164,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Red Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Heals injury on the user"
+      "description": "Found in the tropics. Heals injury on the user",
+      "wiki": {
+        "title": "Red Clusterberry",
+        "revision": 10047,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Red Crispberry": {
       "type": "CONSUMABLE",
-      "description": "Found across most biomes"
+      "description": "Found on bushes across several biomes. The cooked or well-done stage improves Hunger restoration and provides Bonus Stamina.",
+      "wiki": {
+        "title": "Red Crispberry",
+        "revision": 10033,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Red Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the mesa. Removes heat, but afflicts thorns"
+      "description": "Found on cacti in the Mesa. Eating it reduces Heat. Eating it raw also applies Thorns; the cooked or well-done stage removes its original Thorns.",
+      "wiki": {
+        "title": "Red Prickleberry",
+        "revision": 10057,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Thorns"
+          ]
+        }
+      }
     },
     "Red Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Releases spores, and produces a beneficial effect when eaten"
+      "description": "Found in the Roots. Eating it raw releases Spores and may cause a random beneficial effect. The cooked or well-done stage removes its original Spores.",
+      "wiki": {
+        "title": "Red Shroomberry",
+        "revision": 10677,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Remedy Fungus": {
       "type": "CONSUMABLE",
-      "description": "Releases a cloud of healing smoke with an 8 metre radius when dropped"
+      "description": "Releases a cloud of healing smoke with an 8 metre radius when dropped",
+      "wiki": {
+        "title": "Remedy Fungus",
+        "revision": 11113,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Rescue Claw": {
       "type": "EQUIPMENT",
-      "description": "Can be used 3 times. Pulls the wielder toward terrain, or pulls other scouts toward them"
+      "description": "Can be used 3 times. Pulls the wielder toward terrain, or pulls other scouts toward them. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Rescue Claw",
+        "revision": 11988,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "RitualDagger": {
       "type": "MYSTICAL",
-      "description": "Found in ancient luggage and statues. On use, removes the user's negative status effects"
+      "description": "Found in Ancient Luggage or Ancient Statues in co-op. Use it from behind on another Scout to sacrifice them, heal yourself of most negative effects, and gain Bonus stamina; it does not remove Thorns, Curse, or Petrify.",
+      "wiki": {
+        "title": "Ritual Dagger",
+        "revision": 11865,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; cooking-does-not-change-function; in-game-validation-pending"
+      }
     },
     "Rocketpack": {
       "type": "EQUIPMENT",
-      "description": "Worn to launch the scout upwards in a single burst"
+      "description": "Worn to launch the scout upwards in a single burst",
+      "wiki": {
+        "title": "Rocketpack",
+        "revision": 11277,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "rope cannon": {
       "type": "DEPLOYABLE",
-      "description": "Fires a harpoon that drops a climbable rope where it strikes a compatible surface"
+      "description": "Fires a harpoon that drops a climbable rope where it strikes a compatible surface. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Rope Cannon",
+        "revision": 8625,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "rope spool": {
       "type": "DEPLOYABLE",
-      "description": "Deploys climbable rope up to 10 metres long, attachable to any climbable surface"
+      "description": "Deploys climbable rope up to 10 metres long, attachable to any climbable surface. Incinerating this item makes it unusable.",
+      "wiki": {
+        "title": "Rope Spool",
+        "revision": 7363,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Scorchberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics, roots and alpine. Afflicts heat onto the user"
+      "description": "Found in the tropics, roots and alpine. Afflicts heat onto the user",
+      "wiki": {
+        "title": "Scorchberry",
+        "revision": 10036,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Scorpion": {
       "type": "MISC",
-      "description": "Found in the mesa. Can be held but not stored in an inventory slot, and cannot be eaten raw"
+      "description": "Found in Mesa canyons and cliffs; it can be held but not stored, and it cannot be eaten raw. Cooking makes it edible and stops it moving or attacking; it still cannot be stored in an inventory slot or Backpack.",
+      "wiki": {
+        "title": "Scorpion",
+        "revision": 12098,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scout Cannon": {
       "type": "DEPLOYABLE",
-      "description": "Places a cannon that launches scouts across the map. Afflicts injury on launch"
+      "description": "Places a cannon that launches scouts across the map. Afflicts injury on launch. Cooking makes it explode in a manner similar to Dynamite.",
+      "wiki": {
+        "title": "Scout Cannon",
+        "revision": 11987,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Scout Cookies": {
       "type": "CONSUMABLE",
-      "description": "Can be used 4 times"
+      "description": "Can be used 4 times",
+      "wiki": {
+        "title": "Scout Cookies",
+        "revision": 10987,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Scout Effigy": {
       "type": "MYSTICAL",
-      "description": "Resurrects a dead scout at a target location. Does not spawn in solo play"
+      "description": "A one-use mystical item that can revive a dead or unconscious Scout at the target location; it does not spawn in solo play. Cooking grants Bonus stamina when the effigy is used. Using it after Incineration also inflicts Poison on the user.",
+      "wiki": {
+        "title": "Scout Effigy",
+        "revision": 11968,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scoutmaster's Bugle": {
       "type": "MYSTICAL",
-      "description": "Grants the user and nearby scouts bonus stamina, and summons the Scoutmaster for two minutes"
+      "description": "A single-use mystical item found in Ancient Luggage or at Ancient Statues; blowing it grants Bonus Stamina to the user and nearby scouts and summons the Scoutmaster for two minutes. Playing it after Incineration also inflicts Poison on the user.",
+      "wiki": {
+        "title": "Scoutmaster's Bugle",
+        "revision": 11283,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "SCOUTMASTERSOUL": {
       "type": "MYSTICAL",
-      "description": "Freed from a bubble in Nadir. Carrying it to the PEAK restores the Scoutmaster and unlocks the secret ending"
+      "description": "Freed in Nadir, the Scoutmaster's soul follows the Scout to the Peak and reunites with Myres in the ending."
     },
     "ScoutsHonor": {
       "type": "MYSTICAL",
-      "description": "Held by the Stone Scout at the PEAK. On use, transports all players to Nadir"
+      "description": "Created when four Scout Amulets are bestowed on the Stone Scout at the Peak; activating it sends all Scouts to Nadir. Cooking triggers a 40-meter Anti-Sphere explosion and summons the Scoutmaster to chase the player who cooked it.",
+      "wiki": {
+        "title": "Scout's Honor",
+        "revision": 11889,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scroll": {
       "type": "MISC",
-      "description": "Found at campfires. Opens to reveal a Torn Page"
+      "description": "Found at campfires. Opens to reveal a Torn Page. Cooking adds a Bonus stamina effect when the scroll is opened.",
+      "wiki": {
+        "title": "Scroll",
+        "revision": 11890,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Shelf Fungus": {
       "type": "DEPLOYABLE",
-      "description": "Creates a platform when thrown at a wall"
+      "description": "Creates a platform when thrown at a wall",
+      "wiki": {
+        "title": "Shelf Fungus",
+        "revision": 8870,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Skull": {
       "type": "UNUSED",
-      "description": "Unused item"
+      "description": "Unused plain version of Cursed Skull; it has no gameplay effect and may make creepy noises nearby."
     },
     "Small Egg": {
       "type": "CONSUMABLE",
-      "description": "Found in the gloom"
+      "description": "Found in Raven nests in the Gloom. Cracking it usually yields an Egg and rarely a Cooked Bird. Cooking the Small Egg also cooks the Egg it yields when cracked; the rare Cooked Bird result is separate.",
+      "wiki": {
+        "title": "Small Egg",
+        "revision": 12075,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "SNOWBALL": {
       "type": "MISC",
-      "description": "Found in the alpine. Can be thrown at other scouts"
+      "description": "Picked up from snow piles in the Alpine and throwable at other scouts; larger snowballs cause stronger knockback, and become too large to pick up beyond a certain size. A cooked Snowball inflicts Cold when it hits but does not knock the target down.",
+      "wiki": {
+        "title": "Snowball",
+        "revision": 12024,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Sports Drink": {
       "type": "CONSUMABLE",
-      "description": "Removes a large amount of heat from the user"
+      "description": "Found in luggage; drinking it removes a large amount of Heat. The first cooking stage adds Bonus Stamina, with no further increase from continued cooking. Burning or incineration adds no penalty.",
+      "wiki": {
+        "title": "Sports Drink",
+        "revision": 11351,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Stick": {
       "type": "MISC",
-      "description": "Can be thrown or used as fuel for a fire"
+      "description": "Unused wood prop; the Wiki says it may have been intended as campfire fuel, but documents no working use."
     },
     "Stone": {
       "type": "MISC",
-      "description": "Can be picked up and thrown"
+      "description": "Unused stone; the Wiki notes campfire-heating code intended to prevent Cold, but says it does not appear to work."
     },
     "Strange Gem": {
       "type": "MYSTICAL",
-      "description": "Held by the Stone Scout at the PEAK. Can be toggled on and off, but serves no practical purpose"
+      "description": "Found in the Stone Scout's hands at the Peak; clicking it toggles its activation message. Cooking grants Bonus Stamina when it is bestowed on the statue; bestowing it after incineration also applies Poison. Placing four Scout Amulets in the statue's slots transforms it into Scout's Honor.",
+      "wiki": {
+        "title": "Strange Gem",
+        "revision": 11883,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Sunscreen": {
       "type": "CONSUMABLE",
-      "description": "Can be used 3 times. Each spray grants sun protection for 90 seconds"
+      "description": "Up to three uses. Uncooked spray grants temporary Sun Protection. Using it after cooking causes an explosion and releases a large sunscreen cloud without knockback.",
+      "wiki": {
+        "title": "Sunscreen",
+        "revision": 10959,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "THEBOOKOFBONES": {
       "type": "MYSTICAL",
-      "description": "On use, afflicts curse onto the holder"
+      "description": "On use, afflicts curse onto the holder. Cooking changes its appearance only; its use effect is unchanged.",
+      "wiki": {
+        "title": "The Book of Bones",
+        "revision": 12107,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Tick": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Does not afflict poison when eaten"
+      "description": "Found in the tropics. Does not afflict poison when eaten",
+      "wiki": {
+        "title": "Tick",
+        "revision": 9548,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Torch": {
       "type": "EQUIPMENT",
-      "description": "Found only inside the mesa's Tomb. Provides light for a limited time"
+      "description": "Found only inside the mesa's Tomb. Provides light for a limited time",
+      "wiki": {
+        "title": "Torch",
+        "revision": 5474,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Torn Page": {
       "type": "MISC",
-      "description": "Revealed by opening a Scroll"
+      "description": "A page from Scoutmaster Myres's diary, revealed by opening a Scroll according to the player's reading progress and campfire location."
     },
     "Trail Mix": {
       "type": "CONSUMABLE",
-      "description": "Found throughout the climb"
+      "description": "Found throughout the climb",
+      "wiki": {
+        "title": "Trail Mix",
+        "revision": 10053,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "VOIDLAUNCHER": {
-      "type": ["MYSTICAL", "DEPLOYABLE"],
-      "description": "Found in ancient luggage and statues. Shoots an anti-sphere up to 40 metres away that reverses gravity where it lands"
+      "type": [
+        "MYSTICAL",
+        "DEPLOYABLE"
+      ],
+      "description": "Found in ancient luggage and statues. Shoots an anti-sphere up to 40 metres away that reverses gravity where it lands. Cooking makes it explode and creates a larger Anti-Sphere at its location.",
+      "wiki": {
+        "title": "Anti-Zooka",
+        "revision": 11225,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "WARP COMPASS": {
       "type": "MYSTICAL",
-      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map"
+      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map",
+      "wiki": {
+        "title": "Warp Compass",
+        "revision": 9538,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warp Compass": {
       "type": "MYSTICAL",
-      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map"
+      "description": "Teleports the user to a random scout. No longer obtainable in normal play after bugs sent players off the map",
+      "wiki": {
+        "title": "Warp Compass",
+        "revision": 9538,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warp Fungus": {
       "type": "MYSTICAL",
-      "description": "When thrown, teleports the user to where it lands"
+      "description": "When thrown, teleports the user to where it lands",
+      "wiki": {
+        "title": "Warp Fungus",
+        "revision": 12081,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warpsketball": {
       "type": "UNUSED",
-      "description": "Unused item"
+      "description": "Unused basketball variant that teleports players to where it lands and is consumed on use."
     },
     "Weird Shroom": {
       "type": "UNUSED",
-      "description": "Unused item"
+      "description": "Unused non-poisonous mushroom that can be eaten twice; its intended glowing effect does not work."
     },
     "Yellow Berrynana": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Drops a Berrynana Peel when eaten"
+      "description": "Found in the tropics. Drops a Berrynana Peel when eaten",
+      "wiki": {
+        "title": "Yellow Berrynana",
+        "revision": 11173,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics"
+      "description": "Found in the tropics",
+      "wiki": {
+        "title": "Yellow Clusterberry",
+        "revision": 10048,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Crispberry": {
       "type": "CONSUMABLE",
-      "description": "Found across most biomes"
+      "description": "Found across most biomes",
+      "wiki": {
+        "title": "Yellow Crispberry",
+        "revision": 10034,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Kingberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the tropics. Afflicts poison 3 seconds after eating"
+      "description": "Found on trees in the Tropics. Eating it raw causes delayed Poison; the cooked or well-done stage removes its original Poison.",
+      "wiki": {
+        "title": "Yellow Kingberry",
+        "revision": 10038,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     },
     "Yellow Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the roots. Releases spores, and produces a beneficial effect when eaten"
+      "description": "Found in the Roots. Eating it raw releases Spores and may cause a random beneficial effect. The cooked or well-done stage removes its original Spores.",
+      "wiki": {
+        "title": "Yellow Shroomberry",
+        "revision": 10679,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Yellow Winterberry": {
       "type": "CONSUMABLE",
-      "description": "Found in the alpine. Removes heat and heals injury"
+      "description": "Found in the alpine. Removes heat and heals injury",
+      "wiki": {
+        "title": "Yellow Winterberry",
+        "revision": 11171,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     }
   }
 }

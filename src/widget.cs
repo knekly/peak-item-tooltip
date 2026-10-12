@@ -96,13 +96,14 @@ namespace PeakItemTooltip
             // name
             _name.text = item.GetItemName();
 
-            _description.text = info.Description;
+            TooltipItemSnapshot snapshot = TooltipItemSnapshot.Capture(item);
+            _description.text = ItemDescription.FormatSnapshot(snapshot, info.Description, info.Context, info.StateDescriptions, info.StateChecks);
 
             // type(s): each type name is coloured from the shared type->colour map via rich-text tags
             _type.text = FormatTypes(info.Types, descriptions);
 
             // modifiers are derived live from the item's Action_ModifyStatus components
-            _modifiers.text = ItemModifiers.Format(item);
+            _modifiers.text = ItemModifiers.FormatSnapshot(snapshot);
 
             ApplyConfig();
             SetVisible(true);

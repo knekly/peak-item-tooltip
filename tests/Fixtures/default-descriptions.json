@@ -1,0 +1,25 @@
+{
+  "types": {
+    "CONSUMABLE": "#F2C43D"
+  },
+  "items": {
+    "Green Crispberry": {
+      "type": "CONSUMABLE",
+      "description": "Default English raw description.",
+      "context": "Found in the rainforest.",
+      "stateDescriptions": {
+        "raw": "Raw berries can cause poison.",
+        "cooked": "Cooking removes poison."
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": ["Poison"]
+        }
+      },
+      "wiki": {
+        "title": "Green Crispberry",
+        "revision": 10035
+      }
+    }
+  }
+}

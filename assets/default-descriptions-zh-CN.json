@@ -10,536 +10,1562 @@
   "items": {
     "Airline Food": {
       "type": "CONSUMABLE",
-      "description": "打破普通和大号行李箱获得"
+      "description": "打破普通和大号行李箱获得",
+      "wiki": {
+        "title": "Airline Food",
+        "revision": 10056,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Aloe Vera": {
       "type": "CONSUMABLE",
-      "description": "在方山发现，使用可消除50点炎热"
+      "description": "在方山发现，使用可降低炎热。",
+      "wiki": {
+        "title": "Aloe Vera",
+        "revision": 7230,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "AMULET_CLONE": {
       "type": "MYSTICAL",
-      "description": "使用后复制一件物品。复制出的物品与原物品使用次数相同。护身符和检查点旗帜无法复制"
+      "description": "使用后复制一件物品。复制出的物品与原物品使用次数相同。护身符和检查点旗帜无法复制",
+      "wiki": {
+        "title": "Scout's Generosity",
+        "revision": 11880,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_DOUBLEJUMP": {
       "type": "MYSTICAL",
-      "description": "使用后为12.8米内所有侦察兵施加0.55秒缓降，再为受影响的侦察兵施加3秒风行（低重力）"
+      "description": "使用后为附近侦察兵短暂提供缓降，再施加风行，使其在低重力下移动。",
+      "wiki": {
+        "title": "Scout's Initiative",
+        "revision": 11881,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_HEALING": {
       "type": "MYSTICAL",
-      "description": "使用后治愈多种负面状态效果，并施加10秒无敌"
+      "description": "使用后治愈多种负面状态，并提供暂时无敌。",
+      "wiki": {
+        "title": "Scout's Tenacity",
+        "revision": 11882,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "AMULET_INFINITESTAM": {
       "type": "MYSTICAL",
-      "description": "使用后在玩家周围形成持续8秒、半径9.6米的黄色气泡，使气泡内的玩家与所有侦察兵获得无限耐力"
+      "description": "使用后在周围形成暂时存在的黄色气泡，为气泡内的使用者和其他侦察兵提供无限耐力。",
+      "wiki": {
+        "title": "Scout's Ambition",
+        "revision": 11879,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "Ancient Idol": {
       "type": "MYSTICAL",
-      "description": "在沙漠古墓发现，持有它可使玩家无敌。将其投入熔炉的岩浆中会将其摧毁，并解锁24K徽章"
+      "description": "完成方山古墓挑战后获得。手持时免疫伤害和负面状态，并阻止额外耐力消耗；拾取可获得“神秘学”徽章。将其投入熔炉或城堡的熔岩可解锁“24克拉”徽章。",
+      "wiki": {
+        "title": "Ancient Idol",
+        "revision": 11788,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; page-says-cannot-cook; in-game-validation-pending"
+      }
     },
     "anti-rope cannon": {
       "type": [
         "MYSTICAL",
         "DEPLOYABLE"
       ],
-      "description": "发射一根向上卷绕的7.25米反重力绳索。零重量，丢弃后会漂浮"
+      "description": "发射一根向上卷绕的7.25米反重力绳索。零重量，丢弃后会漂浮。烧毁后无法使用。",
+      "wiki": {
+        "title": "Anti-Rope Cannon",
+        "revision": 7368,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "anti-rope spool": {
       "type": [
         "MYSTICAL",
         "DEPLOYABLE"
       ],
-      "description": "提供共12.5米可攀爬的反重力绳索，可自定义铺设0.75米至10米长度。绳索会向上漂浮。负重量，丢弃后会漂浮"
+      "description": "提供共12.5米可攀爬的反重力绳索，可自定义铺设0.75米至10米长度。绳索会向上漂浮。负重量，丢弃后会漂浮。烧毁后无法使用。",
+      "wiki": {
+        "title": "Anti-Rope Spool",
+        "revision": 12044,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Antidote": {
       "type": "CONSUMABLE",
-      "description": "最多可使用3次。烹饪或投掷会使其碎裂，根据距离清除4.8米内玩家身上最多20点中毒与孢子"
+      "description": "最多可使用3次。投掷使其碎裂，可清除附近玩家的中毒与孢子；烹饪后使用会释放小范围解毒云雾，不会造成击退。",
+      "wiki": {
+        "title": "Antidote",
+        "revision": 12007,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "AUTOPARACHUTE": {
       "type": "UNUSED",
-      "description": "未使用物品"
+      "description": "未使用内容：蓝色的一次性降落伞，会在侦察兵下落时自动展开以防止坠落伤害。"
     },
     "Backpack": {
       "type": "EQUIPMENT",
-      "description": "占用玩家第四个物品栏位，提供四个额外储存栏位"
+      "description": "占用第四个物品栏位，提供四个额外储存栏位。烹饪只改变外观；即使反复烧毁，仍可储存物品。",
+      "wiki": {
+        "title": "Backpack",
+        "revision": 11786,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Balloon": {
       "type": "CONSUMABLE",
-      "description": "使用后为玩家系上一只气球。丢弃后气球会飞走。每只气球降低18%重力，6只及以上额外降低100%，使其向上飞升直至破裂（2分钟或玩家上升160米）"
+      "description": "使用后系上一只气球，降低重力；多个气球可使玩家向上飞升。气球会在持续一段时间或上升一定高度后破裂，丢弃后会飞走。烹饪会使它破裂，无法继续使用。",
+      "wiki": {
+        "title": "Balloon",
+        "revision": 10913,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Balloon Bunch": {
       "type": "CONSUMABLE",
-      "description": "使用后为玩家系上一串气球，在2分钟内或上升100米前降低54%重力。丢弃后气球会飞走"
+      "description": "使用后系上一串气球，降低重力；在持续一段时间或上升一定高度后破裂，丢弃后会飞走。烹饪会使气球破裂，无法继续使用。",
+      "wiki": {
+        "title": "Balloon Bunch",
+        "revision": 9047,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Bandages": {
       "type": "CONSUMABLE",
-      "description": "一次性使用。治愈使用者的受伤"
+      "description": "一次性使用。治愈使用者的受伤。烹饪只会改变外观，使用效果不变。",
+      "wiki": {
+        "title": "Bandages",
+        "revision": 11408,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Beehive": {
       "type": "MISC",
-      "description": "在雨林的树上发现。打破后掉落四个蜂巢块，并放出里面的蜜蜂"
+      "description": "在雨林的树上发现。打破后掉落四个蜂巢块，并放出里面的蜜蜂。蜂巢破裂时，里面的蜂巢块会继承它的烹饪阶段。",
+      "wiki": {
+        "title": "Beehive",
+        "revision": 11925,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Berrynana Peel": {
       "type": "MISC",
-      "description": "食用莓蕉后掉落。踩到它的侦察兵会滑倒"
+      "description": "食用莓蕉后掉落；踩到会使侦察兵滑倒并短暂失去控制。"
     },
     "Big Egg": {
       "type": "CONSUMABLE",
-      "description": "在火山发现。打破后获得一枚蛋，或小概率获得一只已烤熟的鸟"
+      "description": "在火山的岩石巢穴中发现。打破通常得到蛋，偶尔得到已烤熟的鸟。蛋会继承大蛋的烹饪阶段；鸟类产物有例外，不能直接按大蛋阶段推断。",
+      "wiki": {
+        "title": "Big Egg",
+        "revision": 11612,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Big Lollipop": {
       "type": "CONSUMABLE",
-      "description": "食用期间使使用者获得无限耐力"
+      "description": "在行李箱中发现。食用期间提供无限耐力；未烹饪时，效果结束后会施加困倦。烤熟或全熟会消除这项困倦惩罚。",
+      "wiki": {
+        "title": "Big Lollipop",
+        "revision": 10558,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Bing Bong": {
       "type": "MISC",
-      "description": "叮——咚！"
+      "description": "叮——咚！烹饪会降低语音的音调和音量，烧毁后会停止播放语音。",
+      "wiki": {
+        "title": "Bing Bong",
+        "revision": 12099,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Binoculars": {
       "type": "EQUIPMENT",
-      "description": "手持可放大观察远处地形"
+      "description": "手持可放大观察远处地形",
+      "wiki": {
+        "title": "Binoculars",
+        "revision": 12142,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bird": {
       "type": "CONSUMABLE",
-      "description": "在火山发现，由蛋孵化。生成时即已烤熟"
+      "description": "打破大蛋或小蛋时有小概率获得，通常生成时已经烤熟。再次烹饪到全熟不会增强效果；烧焦会减少饥饿恢复并失去额外耐力，继续烧毁会增加中毒。",
+      "wiki": {
+        "title": "Cooked Bird",
+        "revision": 11126,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Black Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现"
+      "description": "在雨林发现",
+      "wiki": {
+        "title": "Black Clusterberry",
+        "revision": 10046,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Blowgun": {
       "type": "MISC",
-      "description": "向其他侦察兵发射飞镖。单人游戏中不会生成"
+      "description": "向其他侦察兵发射飞镖；单人游戏中不会生成。未烹饪时施加困倦，烹饪后改为炎热。",
+      "wiki": {
+        "title": "Blowgun",
+        "revision": 11563,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Blue Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮",
+      "wiki": {
+        "title": "Blue Berrynana",
+        "revision": 10040,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Blue Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。释放孢子，食用后产生有害效果"
+      "description": "在树根区域发现。生食会释放孢子，并可能触发随机负面效果；烤熟或全熟会消除原有孢子，但不代表所有负面效果都被消除。",
+      "wiki": {
+        "title": "Blue Shroomberry",
+        "revision": 10680,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Bounce Fungus": {
       "type": "DEPLOYABLE",
-      "description": "在森蕈发现。扔向表面时形成弹跳平台"
+      "description": "在森蕈发现。扔向表面时形成弹跳平台",
+      "wiki": {
+        "title": "Bounce Fungus",
+        "revision": 7626,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Brown Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮",
+      "wiki": {
+        "title": "Brown Berrynana",
+        "revision": 11312,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bugle": {
       "type": "EQUIPMENT",
-      "description": "在拍照点和坠机点发现。使用时发出音符"
+      "description": "在拍照点和坠机点发现。使用时发出音符。每次烹饪都会让音调更加摇摆。",
+      "wiki": {
+        "title": "Bugle",
+        "revision": 11284,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Bugle of Friendship": {
       "type": "MYSTICAL",
-      "description": "吹奏期间为大片半径内所有侦察兵提供无限耐力，最长共7.5秒"
+      "description": "吹奏期间为附近侦察兵提供无限耐力，吹奏时间有限。",
+      "wiki": {
+        "title": "Bugle of Friendship",
+        "revision": 11947,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Bugle Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、热带雨林、树根和方山发现；部分变种有毒。烹饪不会消除有毒蘑菇变种的中毒效果。",
+      "wiki": {
+        "title": "Bugle Shroom",
+        "revision": 11906,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Button Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、热带雨林、树根和方山发现；部分变种有毒。烹饪不会消除有毒蘑菇变种的中毒效果。",
+      "wiki": {
+        "title": "Button Shroom",
+        "revision": 11909,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Cactus": {
       "type": "CONSUMABLE",
-      "description": "在方山发现。对使用者施加荆棘"
+      "description": "在方山发现。对使用者施加荆棘",
+      "wiki": {
+        "title": "Cactus",
+        "revision": 7704,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Candlestick": {
       "type": "EQUIPMENT",
-      "description": "在雾沼和城塞发现。提供光源"
+      "description": "在雾沼和城塞发现。提供光源",
+      "wiki": {
+        "title": "Candlestick",
+        "revision": 10763,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Chain Launcher": {
       "type": "DEPLOYABLE",
-      "description": "在两点之间创造可攀爬的链条"
+      "description": "在两点之间创造可攀爬的链条。烧毁后无法使用。",
+      "wiki": {
+        "title": "Chain Launcher",
+        "revision": 7654,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Checkpoint Flag": {
       "type": "DEPLOYABLE",
-      "description": "为放置它的侦察兵设置一个一次性重生检查点"
+      "description": "为放置它的侦察兵设置一个一次性重生检查点。只有爆炸能烹饪这面旗，每次爆炸会让烹饪阶段前进两级；烹饪后使用它会提供额外耐力。",
+      "wiki": {
+        "title": "Checkpoint Flag",
+        "revision": 11239,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Chubby Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林和森蕈发现"
+      "description": "在海岸、雨林和森蕈发现",
+      "wiki": {
+        "title": "Chubby Shroom",
+        "revision": 11907,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Climbing Chalk": {
       "type": "UNUSED",
-      "description": "未使用物品"
+      "description": "未使用内容，没有模型和贴图；Wiki 记载它可以暂时减少攀爬时的耐力消耗。"
     },
     "Cloud Fungus": {
       "type": "DEPLOYABLE",
-      "description": "在森蕈发现。扔向墙壁时形成平台"
+      "description": "在森蕈发现。扔向墙壁时形成平台",
+      "wiki": {
+        "title": "Cloud Fungus",
+        "revision": 11182,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Cluster Shroom": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林和方山发现。部分变种会在10秒后施加中毒"
+      "description": "在海岸、热带雨林、树根和方山发现；部分变种有毒。烹饪不会消除有毒蘑菇变种的中毒效果。",
+      "wiki": {
+        "title": "Cluster Shroom",
+        "revision": 11908,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Coconut": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林和方山发现。打破后获得两半椰子"
+      "description": "在海岸、雨林和方山发现。打破后获得两半椰子。烹饪后会变成烤熟的半个椰子。",
+      "wiki": {
+        "title": "Coconut",
+        "revision": 12013,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Coconut Half": {
       "type": "CONSUMABLE",
-      "description": "由打破椰子获得"
+      "description": "打破椰子后获得，食用可降低炎热。烤熟或全熟会增强饥饿恢复，并提供额外耐力。",
+      "wiki": {
+        "title": "Half-Coconut",
+        "revision": 9542,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Compass": {
       "type": "EQUIPMENT",
-      "description": "在海岸坠机点发现。指向峰顶（PEAK）"
+      "description": "在海岸坠机点发现。指向峰顶（PEAK）",
+      "wiki": {
+        "title": "Compass",
+        "revision": 5463,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Conch": {
       "type": "MISC",
-      "description": "在海岸发现。可以投掷，但除此之外没什么用处"
+      "description": "在海岸发现。可以投掷，但除此之外没什么用处",
+      "wiki": {
+        "title": "Conch",
+        "revision": 11368,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; visual-only-cooking; in-game-validation-pending"
+      }
     },
     "Cure-All": {
       "type": "CONSUMABLE",
-      "description": "使用后清除使用者身上几乎所有的负面状态效果"
+      "description": "使用后清除使用者身上几乎所有的负面状态效果。烹饪后使用会爆炸并释放小范围治疗云雾，不会造成击退。",
+      "wiki": {
+        "title": "Cure-All",
+        "revision": 12012,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Cursed Skull": {
       "type": "MYSTICAL",
-      "description": "使用后立即杀死持有它的侦察兵，并为其他玩家提供额外耐力"
+      "description": "使用后立即杀死持有它的侦察兵，并为其他玩家提供额外耐力。烹饪会立即激活它，随后引发类似炸药的爆炸。",
+      "wiki": {
+        "title": "Cursed Skull",
+        "revision": 11558,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Dynamite": {
       "type": "MISC",
-      "description": "在方山的地面和行李中发现。短暂引信后引爆，使附近侦察兵受伤"
+      "description": "在方山的地面和行李中发现。短暂引信后引爆，使附近侦察兵受伤。烹饪会使其立即爆炸。",
+      "wiki": {
+        "title": "Dynamite",
+        "revision": 11396,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "EARLYWORM": {
       "type": "CONSUMABLE",
-      "description": "在雾沼发现。清除使用者的困倦"
+      "description": "在雾沼地面发现，食用可清除困倦并获得“休息充足”徽章。烹饪会让虫子停止移动，但不增加额外耐力；烧焦会减少饥饿恢复，继续烧毁会增加食用时的中毒。",
+      "wiki": {
+        "title": "The Early Worm",
+        "revision": 11896,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Egg": {
       "type": "CONSUMABLE",
-      "description": "在火山和雾沼发现，或由打破大蛋获得"
+      "description": "在火山和雾沼发现，或由打破大蛋获得",
+      "wiki": {
+        "title": "Egg",
+        "revision": 11625,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Energy Drink": {
       "type": "CONSUMABLE",
-      "description": "提供暂时的速度提升，并施加困倦"
+      "description": "在行李箱中发现，饮用后暂时提升速度。未烹饪时，速度效果结束后会施加困倦；烤熟或全熟后饮用会爆炸并击退附近玩家，速度提升持续更久，结束后不再追加困倦。",
+      "wiki": {
+        "title": "Energy Drink",
+        "revision": 11234,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Drowsy"
+          ]
+        }
+      }
     },
     "Faerie Lantern": {
       "type": "MYSTICAL",
-      "description": "在30秒内清除使用者身上的多种负面状态效果"
+      "description": "未烹饪时，使用会逐步清除使用者的多种负面状态。烹饪后使用会爆炸并释放小范围治疗云雾。",
+      "wiki": {
+        "title": "Faerie Lantern",
+        "revision": 11089,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Fannypack": {
       "type": "EQUIPMENT",
-      "description": "佩戴后提供额外储存栏位"
+      "description": "佩戴后提供额外储存栏位",
+      "wiki": {
+        "title": "Fanny Pack",
+        "revision": 12084,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "First Aid Kit": {
       "type": "CONSUMABLE",
-      "description": "使用需要5秒。清除中毒和孢子，并治愈受伤"
+      "description": "使用需要5秒。清除中毒和孢子，并治愈受伤。烹饪只会改变外观，使用效果不变。",
+      "wiki": {
+        "title": "First Aid Kit",
+        "revision": 11223,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Flare": {
       "type": "EQUIPMENT",
-      "description": "在坠机点和峰顶发现。在峰顶使用时召唤救援直升机"
+      "description": "在坠机点和峰顶发现。在峰顶使用时召唤救援直升机。烹饪会使其爆炸，对小范围内的侦察兵造成受伤效果。",
+      "wiki": {
+        "title": "Flare",
+        "revision": 9540,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Fortified Milk": {
       "type": "CONSUMABLE",
-      "description": "清除使用者的炎热"
+      "description": "在行李箱中发现，饮用可降低炎热并提供暂时无敌。首次烹饪会延长无敌时间，继续烹饪不会再延长。",
+      "wiki": {
+        "title": "Fortified Milk",
+        "revision": 11633,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Frisbee": {
       "type": "MISC",
-      "description": "在空中投掷，可以砸到其他侦察兵"
+      "description": "在空中投掷，可以砸到其他侦察兵",
+      "wiki": {
+        "title": "Flying Disc",
+        "revision": 12008,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Frog": {
       "type": "MISC",
-      "description": "在雾沼发现。可以捡起并携带"
+      "description": "在雾沼发现。可以捡起并携带。烹饪会将它变成青蛙腿。",
+      "wiki": {
+        "title": "Frog",
+        "revision": 12141,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "FrogLegs": {
       "type": "CONSUMABLE",
-      "description": "从青蛙身上采集"
+      "description": "由烹饪青蛙获得，正常游戏中生成时已经烤熟，无法取得生的青蛙腿。烤熟或全熟时可恢复饥饿并提供额外耐力。",
+      "wiki": {
+        "title": "Frog Legs",
+        "revision": 11161,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Glider": {
       "type": "EQUIPMENT",
-      "description": "下落时手持可缓慢滑翔并空中转向"
+      "description": "下落时手持可缓慢滑翔并空中转向",
+      "wiki": {
+        "title": "Glider",
+        "revision": 11997,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; visual-only-cooking; in-game-validation-pending"
+      }
     },
     "Gold Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "在方山发现。清除炎热并治愈受伤，但会施加荆棘"
+      "description": "在方山发现。生食可降低炎热并治愈受伤，但会施加荆棘；烹饪后是否消除荆棘尚待核实。"
     },
     "Granola Bar": {
       "type": "CONSUMABLE",
-      "description": "在攀登途中各处发现"
+      "description": "在攀登途中各处发现",
+      "wiki": {
+        "title": "Granola Bar",
+        "revision": 10052,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Green Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现"
+      "description": "未使用物品。Wiki 记载其可恢复饥饿并移除中毒，但未说明烹饪效果。"
     },
     "Green Crispberry": {
       "type": "CONSUMABLE",
-      "description": "在大多数生物群系发现。食用2秒后施加中毒"
+      "description": "主要在海岸和热带雨林的灌木上发现，其他区域也偶尔出现。生食会延迟中毒；烤熟或全熟会消除原有中毒，两阶段效果相同。烧焦会减少饥饿恢复并失去额外耐力；继续烧毁会增加中毒。",
+      "wiki": {
+        "title": "Green Crispberry",
+        "revision": 10035,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-and-game-code-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        },
+        "burnt": {
+          "mustNotHaveActive": [
+            "ExtraStamina"
+          ]
+        }
+      }
     },
     "Green Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。对使用者施加中毒"
+      "description": "在热带雨林的树上发现。生食会立即中毒；烤熟或全熟会消除原有中毒。",
+      "wiki": {
+        "title": "Green Kingberry",
+        "revision": 10039,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     },
     "Green Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。释放孢子，食用后产生有害效果"
+      "description": "在树根区域发现。生食会释放孢子，并可能触发随机负面效果；烤熟或全熟会消除原有孢子，但不代表所有负面效果都被消除。",
+      "wiki": {
+        "title": "Green Shroomberry",
+        "revision": 10678,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Guidebook": {
       "type": "EQUIPMENT",
-      "description": "在海岸坠机点发现。教授基础玩法"
+      "description": "在海岸坠机点发现。教授基础玩法。烧毁后无法使用。",
+      "wiki": {
+        "title": "Guidebook",
+        "revision": 11331,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Heat Pack": {
       "type": "CONSUMABLE",
-      "description": "在雪山发现。清除使用者的寒冷"
+      "description": "在雪山发现。清除使用者的寒冷。烹饪会使其爆炸，对小范围内的侦察兵造成受伤效果。",
+      "wiki": {
+        "title": "Heat Pack",
+        "revision": 10957,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Honeycomb": {
       "type": "CONSUMABLE",
-      "description": "在雨林和森蕈打破蜂巢获得"
+      "description": "在雨林和森蕈打破蜂巢获得",
+      "wiki": {
+        "title": "Honeycomb",
+        "revision": 9543,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Hot Dog": {
       "type": "CONSUMABLE",
-      "description": "在攀登途中各处发现"
+      "description": "在营火处或雾沼伪装成香蒲出现。",
+      "wiki": {
+        "title": "Hot Dog",
+        "revision": 11165,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Jetpack": {
       "type": "EQUIPMENT",
-      "description": "佩戴后可在燃料耗尽前向上推进侦察兵"
+      "description": "佩戴后可在燃料耗尽前向上推进侦察兵",
+      "wiki": {
+        "title": "Jetpack",
+        "revision": 11898,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Lantern": {
       "type": "EQUIPMENT",
-      "description": "在雨林和雪山发现。提供光线并清除寒冷"
+      "description": "在雨林和雪山发现。提供光线并清除寒冷。烹饪会使其爆炸，对小范围内的侦察兵造成受伤效果。",
+      "wiki": {
+        "title": "Lantern",
+        "revision": 11374,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Magic Bean": {
       "type": "CONSUMABLE",
-      "description": "种植后约3秒长出高达10米的可攀爬藤蔓（若无阻挡）"
+      "description": "种植后约3秒长出高达10米的可攀爬藤蔓（若无阻挡）",
+      "wiki": {
+        "title": "Magic Bean",
+        "revision": 9536,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Mandrake": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。拔起时会尖叫。生吃会隐藏耐力条60秒"
+      "description": "在树根区域发现，拔起时会尖叫。生食会暂时隐藏耐力条；烹饪会停止尖叫，熟食可消除诅咒。",
+      "wiki": {
+        "title": "Mandrake",
+        "revision": 11458,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Marshmallow": {
       "type": "CONSUMABLE",
-      "description": "在攀登途中各处发现。可以在火上烤"
+      "description": "在营火附近发现。",
+      "wiki": {
+        "title": "Marshmallow",
+        "revision": 9532,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Medicinal Root": {
       "type": "CONSUMABLE",
-      "description": "在海岸、雨林、森蕈和方山发现。清除中毒和孢子，并治愈受伤"
+      "description": "在海岸、热带雨林、树根和方山发现；使用可清除中毒和孢子，并治愈受伤。烹饪后会额外消除中毒和孢子。",
+      "wiki": {
+        "title": "Medicinal Root",
+        "revision": 11876,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Megaphone": {
       "type": "EQUIPMENT",
-      "description": "远距离放大侦察兵的声音"
+      "description": "未使用内容；Wiki 仅推测它可能扩展声音传播范围，功能尚未确认。"
     },
     "Napberry": {
       "type": "CONSUMABLE",
-      "description": "在雪山发现。施加困倦，并清除除诅咒外的所有状态效果"
+      "description": "在高山洞穴中发现。食用会清除除诅咒和石化外的大多数状态效果，但会造成严重困倦并使使用者暂时昏厥。",
+      "wiki": {
+        "title": "Napberry",
+        "revision": 12085,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Orange Winterberry": {
       "type": "CONSUMABLE",
-      "description": "在雪山发现。清除使用者的炎热"
+      "description": "在雪山发现。清除使用者的炎热",
+      "wiki": {
+        "title": "Orange Winterberry",
+        "revision": 10045,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Pandora's Lunchbox": {
       "type": "CONSUMABLE",
-      "description": "可使用3次。每次使用随机化使用者的状态效果"
+      "description": "最多可使用3次。未烹饪时，每次使用随机改变使用者的状态效果；烹饪后使用会爆炸，并对附近玩家施加随机效果，不会造成击退。",
+      "wiki": {
+        "title": "Pandora's Lunchbox",
+        "revision": 11410,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Parasol": {
       "type": "EQUIPMENT",
-      "description": "保护侦察兵免受方山阳光照射，手持时减缓下落"
+      "description": "保护侦察兵免受方山阳光照射，手持时减缓下落",
+      "wiki": {
+        "title": "Parasol",
+        "revision": 11946,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Pirate's Compass": {
       "type": "EQUIPMENT",
-      "description": "指向最近的未打开行李或未使用的远古雕像"
+      "description": "指向最近的未打开行李或未使用的远古雕像",
+      "wiki": {
+        "title": "Pirate's Compass",
+        "revision": 7278,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Piton": {
       "type": "DEPLOYABLE",
-      "description": "附着在可攀爬表面上，为侦察兵提供抓握和休息的支点"
+      "description": "附着在可攀爬表面上，为侦察兵提供抓握和休息的支点。烧毁后无法使用。",
+      "wiki": {
+        "title": "Piton",
+        "revision": 10767,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Portable Stove": {
       "type": "DEPLOYABLE",
-      "description": "放置后用于烹饪物品。放置后持续60秒"
+      "description": "放置后用于烹饪物品。放置后持续60秒。烹饪会使其爆炸，对小范围内的侦察兵造成受伤效果。",
+      "wiki": {
+        "title": "Portable Stove",
+        "revision": 10988,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Purple Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现"
+      "description": "在雨林发现",
+      "wiki": {
+        "title": "Purple Kingberry",
+        "revision": 10037,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Purple Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。释放孢子，食用后产生随机的有益或有害效果"
+      "description": "在树根区域发现。生食会释放孢子，并可能触发随机正面或负面效果；烤熟或全熟会消除原有孢子，但不代表随机效果都被消除。",
+      "wiki": {
+        "title": "Purple Shroomberry",
+        "revision": 11164,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Red Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。治愈使用者的受伤"
+      "description": "在雨林发现。治愈使用者的受伤",
+      "wiki": {
+        "title": "Red Clusterberry",
+        "revision": 10047,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Red Crispberry": {
       "type": "CONSUMABLE",
-      "description": "在大多数生物群系发现"
+      "description": "在多个生物群系的灌木上发现。烤熟或全熟会增强饥饿恢复，并提供额外耐力。",
+      "wiki": {
+        "title": "Red Crispberry",
+        "revision": 10033,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Red Prickleberry": {
       "type": "CONSUMABLE",
-      "description": "在方山发现。清除炎热，但会施加荆棘"
+      "description": "在方山的仙人掌上发现。食用可降低炎热；生食还会施加荆棘，烤熟或全熟会消除原有荆棘。",
+      "wiki": {
+        "title": "Red Prickleberry",
+        "revision": 10057,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Thorns"
+          ]
+        }
+      }
     },
     "Red Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。释放孢子，食用后产生有益效果"
+      "description": "在树根区域发现。生食会释放孢子，并可能触发随机正面效果；烤熟或全熟会消除原有孢子。",
+      "wiki": {
+        "title": "Red Shroomberry",
+        "revision": 10677,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Remedy Fungus": {
       "type": "CONSUMABLE",
-      "description": "丢弃时释放半径8米的治疗烟雾云"
+      "description": "丢弃时释放半径8米的治疗烟雾云",
+      "wiki": {
+        "title": "Remedy Fungus",
+        "revision": 11113,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Rescue Claw": {
       "type": "EQUIPMENT",
-      "description": "可使用3次。将使用者拉向地形，或将其他侦察兵拉向使用者"
+      "description": "可使用3次。将使用者拉向地形，或将其他侦察兵拉向使用者。烧毁后无法使用。",
+      "wiki": {
+        "title": "Rescue Claw",
+        "revision": 11988,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "RitualDagger": {
       "type": "MYSTICAL",
-      "description": "在远古行李和雕像中发现。使用后清除使用者的负面状态效果"
+      "description": "在合作模式的远古行李箱或远古雕像中获得。从另一名侦察兵背后使用会牺牲对方，为你治疗大多数负面效果并增加额外耐力；无法移除荆棘、诅咒或石化。",
+      "wiki": {
+        "title": "Ritual Dagger",
+        "revision": 11865,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; cooking-does-not-change-function; in-game-validation-pending"
+      }
     },
     "Rocketpack": {
       "type": "EQUIPMENT",
-      "description": "佩戴后以单次爆发将侦察兵向上发射"
+      "description": "佩戴后以单次爆发将侦察兵向上发射",
+      "wiki": {
+        "title": "Rocketpack",
+        "revision": 11277,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "rope cannon": {
       "type": "DEPLOYABLE",
-      "description": "发射鱼叉，命中可攀爬表面时垂下可攀爬绳索"
+      "description": "发射鱼叉，命中可攀爬表面时垂下可攀爬绳索。烧毁后无法使用。",
+      "wiki": {
+        "title": "Rope Cannon",
+        "revision": 8625,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "rope spool": {
       "type": "DEPLOYABLE",
-      "description": "部署最长10米的可攀爬绳索，可附着在任何可攀爬表面"
+      "description": "部署最长10米的可攀爬绳索，可附着在任何可攀爬表面。烧毁后无法使用。",
+      "wiki": {
+        "title": "Rope Spool",
+        "revision": 7363,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Scorchberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林、森蕈和雪山发现。对使用者施加炎热"
+      "description": "在雨林、森蕈和雪山发现。对使用者施加炎热",
+      "wiki": {
+        "title": "Scorchberry",
+        "revision": 10036,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Scorpion": {
       "type": "MISC",
-      "description": "在方山发现。可以持有但不能放入物品栏位，也不能生吃"
+      "description": "在方山的峡谷和峭壁发现；可以持有但无法存入物品栏或背包，不能生吃。烹饪后可以食用，也会停止移动和攻击；仍不能存入物品栏或背包。",
+      "wiki": {
+        "title": "Scorpion",
+        "revision": 12098,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scout Cannon": {
       "type": "DEPLOYABLE",
-      "description": "放置一门大炮，将侦察兵发射到地图各处。发射时造成受伤"
+      "description": "放置一门大炮，将侦察兵发射到地图各处。发射时造成受伤。烹饪会使其以类似炸药的方式爆炸。",
+      "wiki": {
+        "title": "Scout Cannon",
+        "revision": 11987,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Scout Cookies": {
       "type": "CONSUMABLE",
-      "description": "可使用4次"
+      "description": "可使用4次",
+      "wiki": {
+        "title": "Scout Cookies",
+        "revision": 10987,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Scout Effigy": {
       "type": "MYSTICAL",
-      "description": "在目标位置复活一名死亡的侦察兵。单人游戏中不会生成"
+      "description": "一次性神秘道具，可在目标位置复活死亡或昏迷的侦察兵；单人游戏中不会生成。烹饪后使用图腾还会提供额外耐力。烧毁后使用还会使使用者中毒。",
+      "wiki": {
+        "title": "Scout Effigy",
+        "revision": 11968,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scoutmaster's Bugle": {
       "type": "MYSTICAL",
-      "description": "为使用者及附近侦察兵提供额外耐力，并召唤侦察队长两分钟"
+      "description": "一次性神秘道具，可从远古行李箱或远古雕像中获得；吹奏会为使用者及附近侦察兵提供额外耐力，并召来侦察队长两分钟。烧毁后再吹奏还会使使用者中毒。",
+      "wiki": {
+        "title": "Scoutmaster's Bugle",
+        "revision": 11283,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "SCOUTMASTERSOUL": {
       "type": "MYSTICAL",
-      "description": "从天底的气泡中解放。将其带至峰顶可复活侦察队长并解锁隐藏结局"
+      "description": "在天底与侦察队长的灵魂交流后，它会跟随侦察兵前往山顶，并在结局中与迈尔斯重聚。"
     },
     "ScoutsHonor": {
       "type": "MYSTICAL",
-      "description": "由峰顶的石像侦察兵持有。使用后将所有玩家传送至天底"
+      "description": "将四枚侦察兵护符交给峰顶的石像侦察兵后获得；启动后会把所有侦察兵传送至天底。烹饪会触发半径40米的反重力球爆炸，并召来追击烹饪者的侦察队长。",
+      "wiki": {
+        "title": "Scout's Honor",
+        "revision": 11889,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Scroll": {
       "type": "MISC",
-      "description": "在营火处发现。打开后露出一页残页"
+      "description": "在营火处发现。打开后露出一页残页。烹饪后，打开卷轴还会提供额外耐力。",
+      "wiki": {
+        "title": "Scroll",
+        "revision": 11890,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Shelf Fungus": {
       "type": "DEPLOYABLE",
-      "description": "扔向墙壁时形成平台"
+      "description": "扔向墙壁时形成平台",
+      "wiki": {
+        "title": "Shelf Fungus",
+        "revision": 8870,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Skull": {
       "type": "UNUSED",
-      "description": "未使用物品"
+      "description": "未使用的普通骷髅，与诅咒骷髅不同；它没有实际效果，附近可能会发出诡异声音。"
     },
     "Small Egg": {
       "type": "CONSUMABLE",
-      "description": "在雾沼发现"
+      "description": "在雾沼渡鸦巢穴中发现。打破后通常得到蛋，偶尔得到烤熟的鸟。烹饪小蛋后再打破，会得到已烹饪的蛋；罕见的烤鸟结果另算。",
+      "wiki": {
+        "title": "Small Egg",
+        "revision": 12075,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "SNOWBALL": {
       "type": "MISC",
-      "description": "在雪山发现。可以扔向其他侦察兵"
+      "description": "在雪山的雪堆中拾取，可投向其他侦察兵；雪球越大，击退越强，达到一定大小后无法拾起。烹饪后的雪球命中目标时会施加寒冷，但不会将目标击倒。",
+      "wiki": {
+        "title": "Snowball",
+        "revision": 12024,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Sports Drink": {
       "type": "CONSUMABLE",
-      "description": "清除使用者的大量炎热"
+      "description": "在行李箱中发现，饮用可降低大量炎热。首次烹饪会增加额外耐力，继续烹饪不会再增加；烧焦或烧毁没有额外惩罚。",
+      "wiki": {
+        "title": "Sports Drink",
+        "revision": 11351,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      }
     },
     "Stick": {
       "type": "MISC",
-      "description": "可以投掷或用作生火燃料"
+      "description": "未使用的木棍；Wiki 推测它原本可能用于营火燃料，但没有记录可用功能。"
     },
     "Stone": {
       "type": "MISC",
-      "description": "可以捡起并投掷"
+      "description": "未使用的石头；Wiki 提到它有营火加热以预防寒冷的代码，但该效果似乎无效。"
     },
     "Strange Gem": {
       "type": "MYSTICAL",
-      "description": "由峰顶的石像侦察兵持有。可以开关，但没有什么实际用途"
+      "description": "由峰顶石像侦察兵持有，点击可切换激活提示。烹饪后交给石像侦察兵可提供额外耐力；烧毁后交出还会使使用者中毒。将四枚侦察兵护符放入石像的插槽，可将它变为侦察兵的荣耀。",
+      "wiki": {
+        "title": "Strange Gem",
+        "revision": 11883,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game-validation-pending"
+      }
     },
     "Sunscreen": {
       "type": "CONSUMABLE",
-      "description": "可使用3次。每次喷雾提供90秒防晒"
+      "description": "最多可使用3次。未烹饪时，喷雾提供暂时防晒；烹饪后使用会爆炸并释放大范围防晒云雾，不会造成击退。",
+      "wiki": {
+        "title": "Sunscreen",
+        "revision": 10959,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "THEBOOKOFBONES": {
       "type": "MYSTICAL",
-      "description": "使用后对持有者施加诅咒"
+      "description": "使用后对持有者施加诅咒。烹饪只会改变外观，使用效果不变。",
+      "wiki": {
+        "title": "The Book of Bones",
+        "revision": 12107,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "Tick": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后不会施加中毒"
+      "description": "在雨林发现。食用后不会施加中毒",
+      "wiki": {
+        "title": "Tick",
+        "revision": 9548,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Torch": {
       "type": "EQUIPMENT",
-      "description": "仅在沙漠古墓内部发现。有限时间内提供光线"
+      "description": "仅在沙漠古墓内部发现。有限时间内提供光线",
+      "wiki": {
+        "title": "Torch",
+        "revision": 5474,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Torn Page": {
       "type": "MISC",
-      "description": "打开卷轴后显露"
+      "description": "迈尔斯侦察队长日记中的残页；打开卷轴后，会根据玩家的阅读进度和营火位置揭示相应页面。"
     },
     "Trail Mix": {
       "type": "CONSUMABLE",
-      "description": "在攀登途中各处发现"
+      "description": "在攀登途中各处发现",
+      "wiki": {
+        "title": "Trail Mix",
+        "revision": 10053,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "VOIDLAUNCHER": {
       "type": [
         "MYSTICAL",
         "DEPLOYABLE"
       ],
-      "description": "在远古行李和雕像中发现。发射一颗最远40米的虚空球，在其落点反转重力"
+      "description": "在远古行李和雕像中发现。发射一颗最远40米的虚空球，在其落点反转重力。烹饪会使其爆炸，并在原地生成更大的反重力球。",
+      "wiki": {
+        "title": "Anti-Zooka",
+        "revision": 11225,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending"
+      }
     },
     "WARP COMPASS": {
       "type": "MYSTICAL",
-      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得"
+      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得",
+      "wiki": {
+        "title": "Warp Compass",
+        "revision": 9538,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warp Compass": {
       "type": "MYSTICAL",
-      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得"
+      "description": "将使用者传送到随机一名侦察兵处。因bug曾将玩家送出地图，正常游玩中已无法获得",
+      "wiki": {
+        "title": "Warp Compass",
+        "revision": 9538,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warp Fungus": {
       "type": "MYSTICAL",
-      "description": "投掷后，将使用者传送到其落点"
+      "description": "投掷后，将使用者传送到其落点",
+      "wiki": {
+        "title": "Warp Fungus",
+        "revision": 12081,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Warpsketball": {
       "type": "UNUSED",
-      "description": "未使用物品"
+      "description": "未使用的篮球变体；投出后会将玩家传送到落点，并在使用后消耗。"
     },
     "Weird Shroom": {
       "type": "UNUSED",
-      "description": "未使用物品"
+      "description": "未使用的无毒蘑菇，可食用两次；其预期的发光效果无法工作。"
     },
     "Yellow Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落莓蕉皮"
+      "description": "在雨林发现。食用后掉落莓蕉皮",
+      "wiki": {
+        "title": "Yellow Berrynana",
+        "revision": 11173,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Clusterberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现"
+      "description": "在雨林发现",
+      "wiki": {
+        "title": "Yellow Clusterberry",
+        "revision": 10048,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Crispberry": {
       "type": "CONSUMABLE",
-      "description": "在大多数生物群系发现"
+      "description": "在大多数生物群系发现",
+      "wiki": {
+        "title": "Yellow Crispberry",
+        "revision": 10034,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Yellow Kingberry": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用3秒后施加中毒"
+      "description": "在热带雨林的树上发现。生食会延迟中毒；烤熟或全熟会消除原有中毒。",
+      "wiki": {
+        "title": "Yellow Kingberry",
+        "revision": 10038,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     },
     "Yellow Shroomberry": {
       "type": "CONSUMABLE",
-      "description": "在森蕈发现。释放孢子，食用后产生有益效果"
+      "description": "在树根区域发现。生食会释放孢子，并可能触发随机正面效果；烤熟或全熟会消除原有孢子。",
+      "wiki": {
+        "title": "Yellow Shroomberry",
+        "revision": 10679,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Spores"
+          ]
+        }
+      }
     },
     "Yellow Winterberry": {
       "type": "CONSUMABLE",
-      "description": "在雪山发现。清除炎热并治愈受伤"
+      "description": "在雪山发现。清除炎热并治愈受伤",
+      "wiki": {
+        "title": "Yellow Winterberry",
+        "revision": 11171,
+        "cookingRevision": 11785,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; no-item-specific-state-prose-needed; in-game-validation-pending"
+      }
     },
     "Pink Berrynana": {
       "type": "CONSUMABLE",
-      "description": "在雨林发现。食用后掉落莓蕉皮"
+      "description": "在热带雨林的藤蔓上发现。食用后会留下莓蕉皮；生食会中毒，烤熟或全熟时会消除原有的中毒效果。",
+      "wiki": {
+        "title": "Pink Berrynana",
+        "revision": 10041,
+        "checkedAt": "2026-10-11",
+        "gameVersion": "2.6.b",
+        "reviewStatus": "wiki-reviewed; in-game validation pending",
+        "cookingRevision": 11785
+      },
+      "stateChecks": {
+        "cooked": {
+          "mustNotHaveActive": [
+            "Poison"
+          ]
+        }
+      }
     }
   }
 }

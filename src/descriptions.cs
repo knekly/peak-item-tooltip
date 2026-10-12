@@ -27,6 +27,45 @@ namespace PeakItemTooltip
 
         [JsonProperty("description")]
         public string Description = "";
+
+        [JsonProperty("context")]
+        public string Context = "";
+
+        [JsonProperty("stateDescriptions")]
+        public Dictionary<string, string> StateDescriptions = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+
+        [JsonProperty("stateChecks")]
+        public Dictionary<string, StateCheck> StateChecks = new Dictionary<string, StateCheck>(StringComparer.OrdinalIgnoreCase);
+
+        [JsonProperty("wiki")]
+        public WikiSource Wiki;
+    }
+
+    public class WikiSource
+    {
+        [JsonProperty("title")]
+        public string Title = "";
+
+        [JsonProperty("revision")]
+        public int Revision;
+
+        [JsonProperty("cookingRevision")]
+        public int CookingRevision;
+
+        [JsonProperty("checkedAt")]
+        public string CheckedAt = "";
+
+        [JsonProperty("gameVersion")]
+        public string GameVersion = "";
+
+        [JsonProperty("reviewStatus")]
+        public string ReviewStatus = "";
+    }
+
+    public class StateCheck
+    {
+        [JsonProperty("mustNotHaveActive")]
+        public List<string> MustNotHaveActive = new List<string>();
     }
 
     /**
@@ -147,33 +186,7 @@ namespace PeakItemTooltip
                     JObject file = JObject.Parse(File.ReadAllText(_path));
                     // read the new embedded default description file
                     JObject baseline = JObject.Parse(defaults);
-                    // accumulator
-                    var added = new List<string>();
-
-                    foreach (string section in new[] { "types", "items" })
-                    {
-                        var source = baseline[section] as JObject;
-                        if (source == null) continue;
-
-                        // user existing description file lookup
-                        var target = file[section] as JObject;
-                        // if a section does not exist, copy the new section over from baseline
-                        if (target == null)
-                        {
-                            file[section] = source.DeepClone();
-                            added.Add(section);
-                            continue;
-                        }
-
-                        var present = new HashSet<string>(target.Properties().Select(p => p.Name), StringComparer.OrdinalIgnoreCase);
-                        foreach (JProperty prop in source.Properties())
-                        {
-                            if (!present.Add(prop.Name)) continue;
-
-                            target[prop.Name] = prop.Value.DeepClone();
-                            added.Add(prop.Name);
-                        }
-                    }
+                    List<string> added = DescriptionDefaultsMerger.MergeMissing(file, baseline);
 
                     // rewrite the description file if any change is detected
                     if (added.Count > 0)
