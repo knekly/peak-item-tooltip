@@ -51,6 +51,9 @@ namespace PeakItemTooltip
         // values reuse the float cell's input box with its slider hidden
         private static GameObject _enumCell;
         private static GameObject _floatCell;
+        private static GameObject _buttonCell;
+        // one of the game's settings tab buttons, captured in AddTabButton
+        private static GameObject _tabTemplate;
 
         // display names per "Section.Key" (en, zh); entries not listed fall back to their split-up key
         private static readonly Dictionary<string, string[]> Names = new Dictionary<string, string[]>
@@ -71,7 +74,7 @@ namespace PeakItemTooltip
             { "Fields.ShowDescription",      new[] { "Show Item Description", "显示物品描述" } },
             { "Fields.ShowModifiers",        new[] { "Show Stat Modifiers", "显示属性变化" } },
             { "Fields.ShowStatusIcons",      new[] { "Use Status Icons For Modifiers", "属性变化使用状态图标" } },
-            { "Fields.ShowUses",             new[] { "Show Remaining Uses", "显示剩余次数" } },
+            { "Fields.ShowUses",           new[] { "Show Remaining Uses", "显示剩余次数" } },
             { "Fields.ShowUsesWhileHolding", new[] { "Show Remaining Uses For Held Item", "手持时显示剩余次数" } },
             { "Fields.ShowWeight",           new[] { "Show Item Weight", "显示物品重量" } },
             { "Fields.IconSize",             new[] { "Item Icon Size", "物品图标大小" } },
@@ -105,6 +108,8 @@ namespace PeakItemTooltip
                 if (template == null || b.category == SettingsCategory.General) template = b;
             }
             if (template == null) return;
+            // kept as the look for the reset button, which has no settings cell of its own
+            if (_tabTemplate == null) _tabTemplate = template.gameObject;
 
             GameObject go = UnityEngine.Object.Instantiate(template.gameObject, template.transform.parent);
             go.name = TabName;
@@ -171,7 +176,127 @@ namespace PeakItemTooltip
                 }
             }
 
+            try { AddResetRow(menu, page); }
+            catch (Exception e) { Plugin.Log.LogWarning($"Could not add the reset-to-defaults row: {e}"); }
+
             page.ScrollRect.verticalNormalizedPosition = 1f;
+        }
+
+        /**
+         * @brief adds a final row whose button resets every entry to its default. the first click arms it
+         *        ("Click Again To Confirm"), the second resets and redraws the tab with the default values
+         */
+        private static void AddResetRow(SharedSettingsMenu menu, Page page)
+        {
+            // the game ships no button cell for its settings, so prefer one if a later version adds it and
+            // otherwise build the button from a settings tab button, which has the same look as the tab bar
+            GameObject template = _buttonCell != null ? _buttonCell : _tabTemplate;
+            if (template == null)
+            {
+                Plugin.Log.LogWarning("Item Tooltip settings tab: no button to copy was found, so the reset row is hidden.");
+                return;
+            }
+
+            GameObject row = MakeRow(menu, page.Content, Zh.IsActive() ? "恢复所有默认设置" : "Reset All Settings To Defaults",
+                out Transform controlParent);
+            page.Rows.Add(row);
+
+            GameObject go = template == _buttonCell ? InstantiateStripped(_buttonCell, controlParent) : MakeButtonInDropdownSlot(controlParent);
+            Button button = go.GetComponentInChildren<Button>(true);
+            TextMeshProUGUI label = go.GetComponentInChildren<TextMeshProUGUI>(true);
+            if (button == null)
+            {
+                Plugin.Log.LogWarning("Item Tooltip settings tab: the game's button cell has no Button, so the reset row has no control.");
+                return;
+            }
+
+            string idle = Zh.IsActive() ? "重置" : "RESET";
+            string armed = Zh.IsActive() ? "再次点击确认" : "CLICK AGAIN TO CONFIRM";
+            if (label != null) label.text = idle;
+
+            bool confirm = false;
+            button.onClick.AddListener(() =>
+            {
+                if (!confirm)
+                {
+                    confirm = true;
+                    if (label != null) label.text = armed;
+                    return;
+                }
+
+                foreach (KeyValuePair<ConfigDefinition, ConfigEntryBase> kv in File)
+                    kv.Value.BoxedValue = kv.Value.DefaultValue;
+
+                // redraw so every control shows its default
+                Clear(menu);
+                Show(menu);
+            });
+        }
+
+        /**
+         * @brief clones a settings tab button as a plain button: the tab scripts are removed (their click handler
+         *        looks for a tab bar above it, and their update recolours the label for the selected state), the
+         *        selected highlight is hidden, and the label is localiser-free
+         */
+        private static GameObject MakePlainButton(GameObject tabButton, Transform parent)
+        {
+            GameObject go = UnityEngine.Object.Instantiate(tabButton, parent);
+            go.name = "ResetButton";
+            go.SetActive(true);
+
+            SettingsTABSButton tab = go.GetComponent<SettingsTABSButton>();
+            if (tab != null)
+            {
+                if (tab.SelectedGraphic != null) tab.SelectedGraphic.SetActive(false);
+                if (tab.text != null) tab.text.color = Color.white;
+                UnityEngine.Object.DestroyImmediate(tab);
+            }
+            foreach (LocalizedText lt in go.GetComponentsInChildren<LocalizedText>(true)) UnityEngine.Object.DestroyImmediate(lt);
+
+            Button button = go.GetComponent<Button>();
+            if (button != null) button.onClick = new Button.ButtonClickedEvent();
+            return go;
+        }
+
+        /**
+         * @brief places a plain tab-style button exactly where the other rows put their dropdown: a dropdown cell
+         *        is built as usual, the button takes the dropdown's place (same parent, anchors, size and layout
+         *        sizing), and the dropdown is removed. the tab button's own rect comes from the tab bar, so
+         *        without this it would sit wherever the tab bar layout had put it
+         */
+        private static GameObject MakeButtonInDropdownSlot(Transform controlParent)
+        {
+            if (_enumCell == null) return MakePlainButton(_tabTemplate, controlParent);
+
+            GameObject cell = InstantiateStripped(_enumCell, controlParent);
+            TMP_Dropdown dd = cell.GetComponentInChildren<TMP_Dropdown>(true);
+            if (dd == null) return MakePlainButton(_tabTemplate, cell.transform);
+
+            RectTransform slot = (RectTransform)dd.transform;
+            GameObject go = MakePlainButton(_tabTemplate, slot.parent);
+            RectTransform rt = (RectTransform)go.transform;
+            rt.anchorMin = slot.anchorMin;
+            rt.anchorMax = slot.anchorMax;
+            rt.pivot = slot.pivot;
+            rt.anchoredPosition = slot.anchoredPosition;
+            rt.sizeDelta = slot.sizeDelta;
+            rt.localScale = slot.localScale;
+            rt.SetSiblingIndex(slot.GetSiblingIndex());
+
+            // when the slot is driven by a layout group, size the button the way the dropdown was sized
+            LayoutElement slotLe = slot.GetComponent<LayoutElement>();
+            LayoutElement le = go.GetComponent<LayoutElement>();
+            if (le == null) le = go.AddComponent<LayoutElement>();
+            le.ignoreLayout = slotLe != null && slotLe.ignoreLayout;
+            le.minWidth = slotLe != null ? slotLe.minWidth : -1f;
+            le.minHeight = slotLe != null ? slotLe.minHeight : -1f;
+            le.preferredWidth = slotLe != null && slotLe.preferredWidth > 0f ? slotLe.preferredWidth : slot.rect.width;
+            le.preferredHeight = slotLe != null && slotLe.preferredHeight > 0f ? slotLe.preferredHeight : slot.rect.height;
+            le.flexibleWidth = slotLe != null ? slotLe.flexibleWidth : -1f;
+            le.flexibleHeight = slotLe != null ? slotLe.flexibleHeight : -1f;
+
+            UnityEngine.Object.DestroyImmediate(dd.gameObject);
+            return go;
         }
 
         private static string TabLabel()
@@ -322,6 +447,8 @@ namespace PeakItemTooltip
 
             _enumCell = MapperField(mapper, "EnumSettingCell");
             _floatCell = MapperField(mapper, "FloatSettingCell");
+            // optional: only the reset row needs it
+            _buttonCell = MapperField(mapper, "ButtonSettingCell");
             if (_enumCell == null || _floatCell == null)
                 Plugin.Log.LogWarning($"Item Tooltip settings tab: missing input cells (dropdown={_enumCell != null}, slider={_floatCell != null}).");
             return _enumCell != null && _floatCell != null;
@@ -364,13 +491,26 @@ namespace PeakItemTooltip
          */
         private static GameObject MakeRow(SharedSettingsMenu menu, Transform parent, ConfigEntryBase entry)
         {
-            GameObject row = UnityEngine.Object.Instantiate(menu.m_settingsCellPrefab, parent);
+            string key = entry.Definition.Section + "." + entry.Definition.Key;
+            GameObject row = MakeRow(menu, parent, Localised(Names, key, Humanise(entry.Definition.Key)), out Transform controlParent);
             row.name = "Row_" + entry.Definition.Key;
+            AddControl(entry, controlParent);
+            return row;
+        }
+
+        /**
+         * @brief clones an empty, labelled settings row
+         * @param label the row's label text
+         * @param controlParent where the row's control goes
+         */
+        private static GameObject MakeRow(SharedSettingsMenu menu, Transform parent, string label, out Transform controlParent)
+        {
+            GameObject row = UnityEngine.Object.Instantiate(menu.m_settingsCellPrefab, parent);
             row.SetActive(true);
 
             SettingsUICell cell = row.GetComponent<SettingsUICell>();
-            TextMeshProUGUI label = cell.m_text;
-            Transform controlParent = cell.m_settingsContentParent;
+            TextMeshProUGUI labelText = cell.m_text;
+            controlParent = cell.m_settingsContentParent;
             if (cell.onlyOnMainMenu != null) cell.onlyOnMainMenu.SetActive(false);
 
             // the row's own scripts would fade it from zero alpha and overwrite the label with a localised
@@ -386,9 +526,7 @@ namespace PeakItemTooltip
             if (le == null) le = row.AddComponent<LayoutElement>();
             if (le.preferredHeight <= 0f) le.preferredHeight = Mathf.Max(rt.sizeDelta.y, 60f);
 
-            string key = entry.Definition.Section + "." + entry.Definition.Key;
-            label.text = Localised(Names, key, Humanise(entry.Definition.Key));
-            AddControl(entry, controlParent);
+            labelText.text = label;
             return row;
         }
 

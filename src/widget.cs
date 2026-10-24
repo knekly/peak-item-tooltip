@@ -21,6 +21,9 @@ namespace PeakItemTooltip
         private readonly PluginConfig _cfg;
 
         private GameObject _canvasGo;
+        private Canvas _canvas;
+        // the hud the canvas order was matched to; the hud is rebuilt per scene, so rematch when it changes
+        private GUIManager _orderedFor;
         private GameObject _rootGo;
         private RectTransform _root;
         // rounded fill panel; a ProceduralImage (Image subclass) so .color/opacity still apply
@@ -37,6 +40,7 @@ namespace PeakItemTooltip
         private TextMeshProUGUI _description;
         // modifier block: a column of pooled rows, each an optional status icon beside a text line
         private GameObject _modifiersGo;
+        private FlowLayoutGroup _modifiersFlow;
         private readonly List<ModifierRow> _modifierRows = new List<ModifierRow>();
         private readonly List<ModifierLine> _modifierLines = new List<ModifierLine>();
         private TMP_FontAsset _font;
@@ -91,6 +95,7 @@ namespace PeakItemTooltip
             }
 
             EnsureBuilt();
+            MatchPauseMenuOrder();
 
             // only show a tooltip for items we have an authored entry for; unlisted items (e.g. airport-only
             // props like chess pieces) have no key in the descriptions file and get no tooltip at all
@@ -176,6 +181,8 @@ namespace PeakItemTooltip
             _description.gameObject.SetActive(_cfg.ShowDescription.Value);
             // modifier block hides when disabled or when the item has no modifiers
             _modifiersGo.SetActive(_cfg.ShowModifiers.Value && _modifierLines.Count > 0);
+            // compact icon lines sit side by side, wrapping left to right; text lines stay one per line
+            _modifiersFlow.oneItemPerLine = !_cfg.ShowStatusIcons.Value;
             LayoutModifierRows();
             // stats block: uses (skipped on the held item unless opted in) then weight, hidden when both are off/empty
             bool showUses = _cfg.ShowUses.Value && (!_held || _cfg.ShowUsesWhileHolding.Value);
@@ -191,6 +198,32 @@ namespace PeakItemTooltip
             _stats.fontSize = _cfg.StatsFontSize.Value;
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(_root);
+        }
+
+        /**
+         * @brief draws the tooltip just under the pause menu (and the settings page in it) so opening the menu
+         *        while holding an item covers the tooltip instead of the other way round. the tooltip canvas
+         *        copies the pause menu canvas's render mode, camera and sorting layer and sorts one below it
+         */
+        private void MatchPauseMenuOrder()
+        {
+            GUIManager gui = GUIManager.instance;
+            if (gui == _orderedFor) return;
+            _orderedFor = gui;
+            if (gui == null || gui.pauseMenuMainPage == null) return;
+
+            Canvas pause = gui.pauseMenuMainPage.GetComponentInParent<Canvas>(true);
+            if (pause == null) return;
+            pause = pause.rootCanvas;
+
+            _canvas.renderMode = pause.renderMode;
+            if (pause.renderMode != RenderMode.ScreenSpaceOverlay)
+            {
+                _canvas.worldCamera = pause.worldCamera;
+                _canvas.planeDistance = pause.planeDistance;
+            }
+            _canvas.sortingLayerID = pause.sortingLayerID;
+            _canvas.sortingOrder = pause.sortingOrder - 1;
         }
 
         /**
@@ -228,7 +261,8 @@ namespace PeakItemTooltip
 
             Canvas canvas = _canvasGo.AddComponent<Canvas>();
             canvas.renderMode = RenderMode.ScreenSpaceOverlay;
-            canvas.sortingOrder = 5000; // draw on top of the game hud
+            canvas.sortingOrder = 5000; // draw on top of the game hud; lowered under the pause menu in MatchPauseMenuOrder
+            _canvas = canvas;
 
             CanvasScaler scaler = _canvasGo.AddComponent<CanvasScaler>();
             scaler.uiScaleMode = CanvasScaler.ScaleMode.ScaleWithScreenSize;
@@ -305,18 +339,15 @@ namespace PeakItemTooltip
             _modifiersGo = new GameObject("Modifiers");
             _modifiersGo.transform.SetParent(_root, false);
             _modifiersGo.AddComponent<RectTransform>();
-            VerticalLayoutGroup modVlg = _modifiersGo.AddComponent<VerticalLayoutGroup>();
-            modVlg.spacing = 2f;
-            modVlg.childControlWidth = true;
-            modVlg.childControlHeight = true;
-            modVlg.childForceExpandWidth = true;
-            modVlg.childForceExpandHeight = false;
+            // wraps side by side in icon mode, one per line in text mode (switched by ShowStatusIcons in ApplyConfig)
+            _modifiersFlow = _modifiersGo.AddComponent<FlowLayoutGroup>();
 
-            // uses + weight block: colours come from rich-text tags
+            // weight sits right under the status modifiers it relates to, with remaining uses last;
+            // the layout group stacks children in creation order. colours come from rich-text tags
+            _weightRow = MakeModifierRow(_root);
             _stats = MakeText("Stats", _root, font, _cfg.StatsFontSize.Value, FontStyles.Normal, Color.white);
             _stats.textWrappingMode = TextWrappingModes.Normal;
             _stats.richText = true;
-            _weightRow = MakeModifierRow(_root);
 
             // white border overlay: added last so it draws on top of the fill and content. it is a
             // hollow rounded ring (BorderWidth > 0) stretched to cover the whole panel, ignored by the

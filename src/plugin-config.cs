@@ -74,7 +74,7 @@ namespace PeakItemTooltip
                 "Also show the tooltip for the item you are holding. If off, it only appears when hovering.");
 
             // ranges let the settings tab show sliders; the offsets span the 1920x1080 reference screen
-            OffsetX = cfg.Bind("Widget", "OffsetX", -710f,
+            OffsetX = cfg.Bind("Widget", "OffsetX", -745f,
                 Range("Horizontal offset from the screen center; positive = right (1920x1080 reference pixels).", -960f, 960f));
             OffsetY = cfg.Bind("Widget", "OffsetY", -220f,
                 Range("Vertical offset from the screen center; positive = up (1920x1080 reference pixels).", -540f, 540f));
