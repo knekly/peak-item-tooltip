@@ -17,26 +17,7 @@
   ⚠️ **note**: by default, the mod's language is set to `Auto` which follows your game's current language. subsequent changes to the language both in-game and the config file will require you to restart your game even if `HotReload` is on  
 ***
 ### 🛠️ configuration
-- this mod allows for several customisable configuration options housed in `peak-item-tooltip.cfg`, _which should be in `BepInEx/config` after running the mod for the first time_
-    | config option •ᴗ•     | description                                                                                                                               |
-  |-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-  | `Language`            | `Auto` by default (follows the game's current language); item tooltip display language                                                    |
-  | `Enabled`             | master toggle for the item tooltip                                                                                                        |
-  | `HotReload`           | `true` by default; allows changes to config and description files to be applied live. changing this option itself requires you to restart |
-  | `ShowWhileHolding`    | `true` by default; displays the item tooltip when holding an item. if disabled, it will **only** show for items that you are looking at   |
-  | `OffsetX`             | horizontal offset from the screen centre                                                                                                  |
-  | `OffsetY`             | vertical offset from the screen centre                                                                                                    |
-  | `Scale`               | item tooltip scale multiplier                                                                                                             |
-  | `BackgroundOpacity`   | background panel opacity                                                                                                                  |
-  | `BorderColour`        | colour of the outline around the item tooltip as a hex string (e.g., #FFFFFF); invalid hex strings will fall back to white                |
-  | `BorderOpacity`       | opacity of the outline around the item tooltip                                                                                            |
-  | `ShowIcon`            | displays the item's icon                                                                                                                  |
-  | `ShowName`            | displays the item's name                                                                                                                  |
-  | `ShowType`            | displays the item's type (e.g., Mystical, Consumable)                                                                                     |
-  | `ShowDescription`     | displays the item's description                                                                                                           |
-  | `ShowModifiers`       | displays the item's status effects                                                                                                        |
-  | `IconSize`            | icon width/height in reference pixels (1920x1080)                                                                                         |
-  | `NameFontSize`        | item name font size                                                                                                                       |
-  | `TypeFontSize`        | item type font size                                                                                                                       |
-  | `DescriptionFontSize` | item description font size                                                                                                                |
-  | `ModifierFontSize`    | item status effect font size                                                                                                              |
+- the mod's configuration and settings have moved from the file to a new in-game settings tab! (you can still manually edit the settings in the `peak-item-tooltip.cfg` config file found in`BepInEx/config` after running the mod for the first time)
+  
+  <img width="1919" height="1004" alt="image" src="https://github.com/user-attachments/assets/0397effb-4fa8-42dc-8869-a2e6d0127f48" />
+
