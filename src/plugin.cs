@@ -8,6 +8,7 @@ using System;
 using System.IO;
 using BepInEx;
 using BepInEx.Logging;
+using HarmonyLib;
 using UnityEngine;
 
 namespace PeakItemTooltip
@@ -58,6 +59,12 @@ namespace PeakItemTooltip
             // plugin + widget configs can be bound immediately (does not depend on scene state)
             _config = new PluginConfig(Config);
             _configWriteUtc = SafeConfigWriteTime();
+
+            // edits made in the settings tab set entries directly; flag the widget to re-apply them
+            Config.SettingChanged += (sender, args) => _configDirty = true;
+            // the Item Tooltip tab is patched into the game's settings page
+            SettingsTab.File = Config;
+            new Harmony(PluginGuid).PatchAll();
         }
 
         /**
@@ -92,7 +99,7 @@ namespace PeakItemTooltip
             }
 
             // assign return value to target item
-            Item target = ResolveTargetItem();
+            Item target = ResolveTargetItem(out bool held);
 
             // hide widget when a consumable is eaten/destroyed
             if (target == null)
@@ -111,16 +118,18 @@ namespace PeakItemTooltip
                 _lastItem = target;
                 _nextContentRefresh = Time.unscaledTime + ContentRefreshInterval;
                 _configDirty = false;
-                _widget.Show(target, _descriptions);
+                _widget.Show(target, _descriptions, held);
             }
         }
 
         /**
          * @brief returns the item to describe: the held item while one is held (holding enabled), otherwise the
          *        hovered item, or null when there is nothing to show
+         * @param held set to true when the returned item is the local player's held item
          */
-        private Item ResolveTargetItem()
+        private Item ResolveTargetItem(out bool held)
         {
+            held = false;
             Interaction interaction = Interaction.instance;
             if (interaction == null) return null;
 
@@ -129,8 +138,12 @@ namespace PeakItemTooltip
             if (_config.ShowWhileHolding.Value)
             {
                 Character local = Character.localCharacter;
-                Item held = local != null && local.data != null ? local.data.currentItem : null;
-                if (held != null) return held;
+                Item heldItem = local != null && local.data != null ? local.data.currentItem : null;
+                if (heldItem != null)
+                {
+                    held = true;
+                    return heldItem;
+                }
             }
 
             // otherwise describe the hovered item; the as operator makes hovers on non-items resolve to null

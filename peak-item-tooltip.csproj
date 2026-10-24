@@ -56,6 +56,12 @@
       <Private>false</Private>
     </Reference>
 
+    <!-- zorro ui: the settings tab buttons derive from its TAB_Button -->
+    <Reference Include="Zorro.UI.Runtime">
+      <HintPath>$(ManagedDir)\Zorro.UI.Runtime.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+
     <!-- unity engine modules -->
     <Reference Include="UnityEngine">
       <HintPath>$(ManagedDir)\UnityEngine.dll</HintPath>

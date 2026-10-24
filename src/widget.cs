@@ -1,7 +1,8 @@
 /**
  * @authors @katcw, @gintoki000 (for chinese simplified translations)
  * @file    widget.cs
- * @brief   builds and updates the ugui tooltip that shows an item's icon, name, type, description, and modifiers
+ * @brief   builds and updates the ugui tooltip that shows an item's icon, name, type, description, modifiers,
+ *          remaining uses, and weight
  */
 using System.Collections.Generic;
 using System.Text;
@@ -34,7 +35,19 @@ namespace PeakItemTooltip
         private TextMeshProUGUI _name;
         private TextMeshProUGUI _type;
         private TextMeshProUGUI _description;
-        private TextMeshProUGUI _modifiers;
+        // modifier block: a column of pooled rows, each an optional status icon beside a text line
+        private GameObject _modifiersGo;
+        private readonly List<ModifierRow> _modifierRows = new List<ModifierRow>();
+        private readonly List<ModifierLine> _modifierLines = new List<ModifierLine>();
+        private TMP_FontAsset _font;
+        private TextMeshProUGUI _stats;
+
+        // the raw uses/weight lines, kept apart so ApplyConfig can toggle them without re-reading the item
+        private string _usesLine = "";
+        private string _weightValue = "";
+        // weight gets its own row so it can show the weight status icon like the modifier lines
+        private ModifierRow _weightRow;
+        private bool _held;
 
         // fallback type colour
         // used when an item has a type but that type isn't in the colour map
@@ -67,8 +80,9 @@ namespace PeakItemTooltip
          * @brief fills the widget with the item's icon, name, type, description, and modifiers, then makes it visible
          * @param item the item to describe
          * @param descriptions the store supplying the item's description and type colour
+         * @param held true when the item is the one the local player is holding
          */
-        public void Show(Item item, Descriptions descriptions)
+        public void Show(Item item, Descriptions descriptions, bool held)
         {
             if (!_cfg.Enabled.Value)
             {
@@ -101,8 +115,13 @@ namespace PeakItemTooltip
             // type(s): each type name is coloured from the shared type->colour map via rich-text tags
             _type.text = FormatTypes(info.Types, descriptions);
 
-            // modifiers are derived live from the item's Action_ModifyStatus components
-            _modifiers.text = ItemModifiers.Format(item);
+            // modifiers are derived live from the item's Action_ModifyStatus components; rows are laid out in ApplyConfig
+            ItemModifiers.GetLines(item, _modifierLines);
+
+            // uses and weight are read live too; which of them show is decided in ApplyConfig
+            _usesLine = ItemStats.FormatUses(item);
+            _weightValue = ItemStats.WeightValue(item);
+            _held = held;
 
             ApplyConfig();
             SetVisible(true);
@@ -156,14 +175,20 @@ namespace PeakItemTooltip
             _type.gameObject.SetActive(_cfg.ShowType.Value && !string.IsNullOrEmpty(_type.text));
             _description.gameObject.SetActive(_cfg.ShowDescription.Value);
             // modifier block hides when disabled or when the item has no modifiers
-            _modifiers.gameObject.SetActive(_cfg.ShowModifiers.Value && !string.IsNullOrEmpty(_modifiers.text));
+            _modifiersGo.SetActive(_cfg.ShowModifiers.Value && _modifierLines.Count > 0);
+            LayoutModifierRows();
+            // stats block: uses (skipped on the held item unless opted in) then weight, hidden when both are off/empty
+            bool showUses = _cfg.ShowUses.Value && (!_held || _cfg.ShowUsesWhileHolding.Value);
+            _stats.text = showUses ? _usesLine : "";
+            _stats.gameObject.SetActive(!string.IsNullOrEmpty(_stats.text));
+            LayoutWeightRow();
 
             _iconLayout.preferredWidth = _cfg.IconSize.Value;
             _iconLayout.preferredHeight = _cfg.IconSize.Value;
             _name.fontSize = _cfg.NameFontSize.Value;
             _type.fontSize = _cfg.TypeFontSize.Value;
             _description.fontSize = _cfg.DescriptionFontSize.Value;
-            _modifiers.fontSize = _cfg.ModifierFontSize.Value;
+            _stats.fontSize = _cfg.StatsFontSize.Value;
 
             LayoutRebuilder.ForceRebuildLayoutImmediate(_root);
         }
@@ -275,10 +300,23 @@ namespace PeakItemTooltip
             _description = MakeText("Description", _root, font, _cfg.DescriptionFontSize.Value, FontStyles.Normal, new Color(0.85f, 0.85f, 0.85f, 1f));
             _description.textWrappingMode = TextWrappingModes.Normal;
 
-            // modifier block: per-status colours come from rich-text tags, so base colour is white
-            _modifiers = MakeText("Modifiers", _root, font, _cfg.ModifierFontSize.Value, FontStyles.Normal, Color.white);
-            _modifiers.textWrappingMode = TextWrappingModes.Normal;
-            _modifiers.richText = true;
+            // modifier block: rows are created on demand in LayoutModifierRows
+            _font = font;
+            _modifiersGo = new GameObject("Modifiers");
+            _modifiersGo.transform.SetParent(_root, false);
+            _modifiersGo.AddComponent<RectTransform>();
+            VerticalLayoutGroup modVlg = _modifiersGo.AddComponent<VerticalLayoutGroup>();
+            modVlg.spacing = 2f;
+            modVlg.childControlWidth = true;
+            modVlg.childControlHeight = true;
+            modVlg.childForceExpandWidth = true;
+            modVlg.childForceExpandHeight = false;
+
+            // uses + weight block: colours come from rich-text tags
+            _stats = MakeText("Stats", _root, font, _cfg.StatsFontSize.Value, FontStyles.Normal, Color.white);
+            _stats.textWrappingMode = TextWrappingModes.Normal;
+            _stats.richText = true;
+            _weightRow = MakeModifierRow(_root);
 
             // white border overlay: added last so it draws on top of the fill and content. it is a
             // hollow rounded ring (BorderWidth > 0) stretched to cover the whole panel, ignored by the
@@ -329,6 +367,121 @@ namespace PeakItemTooltip
             }
 
             return sb.ToString();
+        }
+
+        /**
+         * @brief one modifier row: an icon (hidden in text mode or when the hud icon is missing) and its text
+         */
+        private class ModifierRow
+        {
+            public GameObject Go;
+            public Image Icon;
+            public LayoutElement IconLayout;
+            public TextMeshProUGUI Text;
+        }
+
+        /**
+         * @brief fills the pooled modifier rows from the current lines, drawing the hud status icon in place of
+         *        the status name when ShowStatusIcons is on, and falling back to the name when no icon is found
+         */
+        private void LayoutModifierRows()
+        {
+            bool useIcons = _cfg.ShowStatusIcons.Value;
+            float size = _cfg.ModifierFontSize.Value;
+
+            while (_modifierRows.Count < _modifierLines.Count) _modifierRows.Add(MakeModifierRow(_modifiersGo.transform));
+
+            for (int i = 0; i < _modifierRows.Count; i++)
+            {
+                ModifierRow row = _modifierRows[i];
+                if (i >= _modifierLines.Count)
+                {
+                    row.Go.SetActive(false);
+                    continue;
+                }
+
+                ModifierLine line = _modifierLines[i];
+                Sprite sprite = null;
+                Color tint = Color.white;
+                bool hasIcon = useIcons && StatusIcons.TryGet(line, out sprite, out tint);
+                if (hasIcon)
+                {
+                    row.Icon.sprite = sprite;
+                    tint.a = 1f;
+                    row.Icon.color = tint;
+                }
+
+                row.Go.SetActive(true);
+                row.Icon.gameObject.SetActive(hasIcon);
+                // icon tracks the text size, a little larger so the glyph reads at a glance
+                row.IconLayout.preferredWidth = size * 1.25f;
+                row.IconLayout.preferredHeight = size * 1.25f;
+                row.Text.fontSize = size;
+                row.Text.text = ItemModifiers.FormatLine(line, hasIcon);
+            }
+        }
+
+        /**
+         * @brief fills the weight row, using the hud weight icon in place of the "Weight:" label in icon mode
+         */
+        private void LayoutWeightRow()
+        {
+            bool show = _cfg.ShowWeight.Value && !string.IsNullOrEmpty(_weightValue);
+            _weightRow.Go.SetActive(show);
+            if (!show) return;
+
+            Sprite sprite = null;
+            Color tint = Color.white;
+            ModifierLine weight = new ModifierLine { Status = CharacterAfflictions.STATUSTYPE.Weight };
+            bool hasIcon = _cfg.ShowStatusIcons.Value && StatusIcons.TryGet(weight, out sprite, out tint);
+            if (hasIcon)
+            {
+                _weightRow.Icon.sprite = sprite;
+                tint.a = 1f;
+                _weightRow.Icon.color = tint;
+            }
+
+            float size = _cfg.StatsFontSize.Value;
+            _weightRow.Icon.gameObject.SetActive(hasIcon);
+            _weightRow.IconLayout.preferredWidth = size * 1.25f;
+            _weightRow.IconLayout.preferredHeight = size * 1.25f;
+            _weightRow.Text.fontSize = size;
+            _weightRow.Text.text = ItemStats.FormatWeight(_weightValue, hasIcon);
+        }
+
+        /**
+         * @brief creates one icon + text row under the given parent
+         */
+        private ModifierRow MakeModifierRow(Transform parent)
+        {
+            ModifierRow row = new ModifierRow();
+            row.Go = new GameObject("ModifierRow");
+            row.Go.transform.SetParent(parent, false);
+            row.Go.AddComponent<RectTransform>();
+
+            HorizontalLayoutGroup hlg = row.Go.AddComponent<HorizontalLayoutGroup>();
+            hlg.spacing = 4f;
+            hlg.childControlWidth = true;
+            hlg.childControlHeight = true;
+            hlg.childForceExpandWidth = false;
+            hlg.childForceExpandHeight = false;
+            hlg.childAlignment = TextAnchor.MiddleLeft;
+
+            GameObject iconGo = new GameObject("Icon");
+            iconGo.transform.SetParent(row.Go.transform, false);
+            iconGo.AddComponent<RectTransform>();
+            row.Icon = iconGo.AddComponent<Image>();
+            row.Icon.preserveAspect = true;
+            row.Icon.raycastTarget = false;
+            row.IconLayout = iconGo.AddComponent<LayoutElement>();
+
+            // per-status colours come from rich-text tags, so base colour is white
+            row.Text = MakeText("Text", row.Go.transform, _font, _cfg.ModifierFontSize.Value, FontStyles.Normal, Color.white);
+            row.Text.textWrappingMode = TextWrappingModes.Normal;
+            row.Text.richText = true;
+            row.Text.gameObject.AddComponent<LayoutElement>().flexibleWidth = 1f;
+
+            return row;
         }
 
         /**

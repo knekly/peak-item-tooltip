@@ -41,11 +41,17 @@ namespace PeakItemTooltip
         public readonly ConfigEntry<bool>  ShowType;
         public readonly ConfigEntry<bool>  ShowDescription;
         public readonly ConfigEntry<bool>  ShowModifiers;
+        public readonly ConfigEntry<bool>  ShowStatusIcons;
+        public readonly ConfigEntry<bool>  ShowUses;
+        // remaining uses are hidden on the held item by default (issue #4); this opts back in
+        public readonly ConfigEntry<bool>  ShowUsesWhileHolding;
+        public readonly ConfigEntry<bool>  ShowWeight;
         public readonly ConfigEntry<float> IconSize;
         public readonly ConfigEntry<float> NameFontSize;
         public readonly ConfigEntry<float> TypeFontSize;
         public readonly ConfigEntry<float> DescriptionFontSize;
         public readonly ConfigEntry<float> ModifierFontSize;
+        public readonly ConfigEntry<float> StatsFontSize;
 
         /**
          * @brief binds every widget and field option to the given config file with its default and description
@@ -54,7 +60,8 @@ namespace PeakItemTooltip
         public PluginConfig(ConfigFile cfg)
         {
             LanguageMode = cfg.Bind("Localization", "Language", "Auto",
-                "Tooltip label language: Auto (follow game language) / zh-CN (force Simplified Chinese) / en (force English).");
+                new ConfigDescription("Tooltip label language: Auto (follow game language) / zh-CN (force Simplified Chinese) / en (force English).",
+                new AcceptableValueList<string>("Auto", "zh-CN", "en")));
 
             Enabled = cfg.Bind("Widget", "Enabled", true,
                 "Master toggle for the hover info widget.");
@@ -66,12 +73,16 @@ namespace PeakItemTooltip
             ShowWhileHolding = cfg.Bind("Widget", "ShowWhileHolding", true,
                 "Also show the tooltip for the item you are holding. If off, it only appears when hovering.");
 
-            OffsetX = cfg.Bind("Widget", "OffsetX", -710f, "Horizontal offset from the screen center; positive = right (1920x1080 reference pixels).");
-            OffsetY = cfg.Bind("Widget", "OffsetY", -220f, "Vertical offset from the screen center; positive = up (1920x1080 reference pixels).");
+            // ranges let the settings tab show sliders; the offsets span the 1920x1080 reference screen
+            OffsetX = cfg.Bind("Widget", "OffsetX", -710f,
+                Range("Horizontal offset from the screen center; positive = right (1920x1080 reference pixels).", -960f, 960f));
+            OffsetY = cfg.Bind("Widget", "OffsetY", -220f,
+                Range("Vertical offset from the screen center; positive = up (1920x1080 reference pixels).", -540f, 540f));
             Scale = cfg.Bind("Widget", "Scale", 1.15f,
                 new ConfigDescription("Overall scale multiplier.",
                 new AcceptableValueRange<float>(0.1f, 5f)));
-            Width = cfg.Bind("Widget", "Width", 320f, "Widget width in reference pixels; the description wraps to this width.");
+            Width = cfg.Bind("Widget", "Width", 320f,
+                Range("Widget width in reference pixels; the description wraps to this width.", 150f, 800f));
             BackgroundOpacity = cfg.Bind("Widget", "BackgroundOpacity", 0.75f,
                 new ConfigDescription("Background panel opacity.",
                 new AcceptableValueRange<float>(0f, 1f)));
@@ -86,11 +97,28 @@ namespace PeakItemTooltip
             ShowType = cfg.Bind("Fields", "ShowType", true, "Show the item type (e.g. Mystical, Consumable).");
             ShowDescription = cfg.Bind("Fields", "ShowDescription", true, "Show the description.");
             ShowModifiers = cfg.Bind("Fields", "ShowModifiers", true, "Show item stat modifiers (e.g. +10 Poison).");
-            IconSize = cfg.Bind("Fields", "IconSize", 48f, "Icon width/height in reference pixels.");
-            NameFontSize = cfg.Bind("Fields", "NameFontSize", 22f, "Name font size.");
-            TypeFontSize = cfg.Bind("Fields", "TypeFontSize", 15f, "Type font size.");
-            DescriptionFontSize = cfg.Bind("Fields", "DescriptionFontSize", 16f, "Description font size.");
-            ModifierFontSize = cfg.Bind("Fields", "ModifierFontSize", 16f, "Modifier font size.");
+            ShowStatusIcons = cfg.Bind("Fields", "ShowStatusIcons", false,
+                "Show the status bar icon in place of the status name on modifier lines (e.g. [icon] +10 instead of +10 Poison).");
+            ShowUses = cfg.Bind("Fields", "ShowUses", true,
+                "Show remaining uses or fuel (e.g. Uses 2/3, Rope 40/60, Fuel 80% 96s).");
+            ShowUsesWhileHolding = cfg.Bind("Fields", "ShowUsesWhileHolding", false,
+                "Also show remaining uses for the item you are holding. If off, uses only show for hovered/dropped items.");
+            ShowWeight = cfg.Bind("Fields", "ShowWeight", true,
+                "Show how much the item adds to the weight bar when carried.");
+            IconSize = cfg.Bind("Fields", "IconSize", 48f, Range("Icon width/height in reference pixels.", 16f, 128f));
+            NameFontSize = cfg.Bind("Fields", "NameFontSize", 22f, Range("Name font size.", 8f, 48f));
+            TypeFontSize = cfg.Bind("Fields", "TypeFontSize", 15f, Range("Type font size.", 8f, 48f));
+            DescriptionFontSize = cfg.Bind("Fields", "DescriptionFontSize", 16f, Range("Description font size.", 8f, 48f));
+            ModifierFontSize = cfg.Bind("Fields", "ModifierFontSize", 16f, Range("Modifier font size.", 8f, 48f));
+            StatsFontSize = cfg.Bind("Fields", "StatsFontSize", 15f, Range("Uses and weight font size.", 8f, 48f));
+        }
+
+        /**
+         * @brief a description limited to a float range
+         */
+        private static ConfigDescription Range(string description, float min, float max)
+        {
+            return new ConfigDescription(description, new AcceptableValueRange<float>(min, max));
         }
     }
 }

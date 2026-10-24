@@ -12,6 +12,22 @@ using UnityEngine;
 namespace PeakItemTooltip
 {
     /**
+     * @brief one stat modifier line: its colour, signed value text (e.g. "+10", "+3–8"), label, and the
+     *        status whose icon can stand in for the label
+     */
+    public struct ModifierLine
+    {
+        public Color Colour;
+        public string Value;
+        public string Label;
+        // optional suffix kept in both text and icon mode, e.g. "per jump" for petrifyPerJump
+        public string Qualifier;
+        // extra stamina has no STATUSTYPE, so it is flagged separately for the icon lookup
+        public CharacterAfflictions.STATUSTYPE Status;
+        public bool IsStamina;
+    }
+
+    /**
      * @brief reads a consumable item's effect components and formats them as signed, colour-coded lines, scaling fractions to points
      */
     public static class ItemModifiers
@@ -41,14 +57,14 @@ namespace PeakItemTooltip
         private static readonly Color Fallback = Color.white;
 
         /**
-         * @brief builds a rich-text block of the item's stat modifiers, one coloured line per modifier, or an empty string if it has none
+         * @brief collects the item's stat modifiers, one line per modifier, into the given list (cleared first)
+         * @param item the item to read
+         * @param lines the list the lines are written into
          */
-        public static string Format(Item item)
+        public static void GetLines(Item item, List<ModifierLine> lines)
         {
-            if (item == null) return "";
-
-            StringBuilder sb = new StringBuilder();
-            bool first = true;
+            lines.Clear();
+            if (item == null) return;
 
             // order from top to bottom is as such: [1] hunger, [2] poison, [3] weight/other, [4] stamina, [5] petrify
 
@@ -56,48 +72,77 @@ namespace PeakItemTooltip
             foreach (Action_RestoreHunger a in item.GetComponentsInChildren<Action_RestoreHunger>(true))
             {
                 if (a == null) continue;
-                AppendLine(sb, ref first, ColourFor(CharacterAfflictions.STATUSTYPE.Hunger), -a.restorationAmount, Zh.IsActive() ? "饥饿" : "Hunger");
+                AddFraction(lines, CharacterAfflictions.STATUSTYPE.Hunger, -a.restorationAmount);
             }
 
             // ADDED poision over time: total applied = poison per second * time
             foreach (Action_InflictPoison a in item.GetComponentsInChildren<Action_InflictPoison>(true))
             {
                 if (a == null) continue;
-                AppendLine(sb, ref first, ColourFor(CharacterAfflictions.STATUSTYPE.Poison), a.poisonPerSecond * a.inflictionTime, Zh.IsActive() ? "中毒" : "Poison");
+                AddFraction(lines, CharacterAfflictions.STATUSTYPE.Poison, a.poisonPerSecond * a.inflictionTime);
             }
 
             // signed generic status changes: covers weight and anything else)t.
             foreach (Action_ModifyStatus a in item.GetComponentsInChildren<Action_ModifyStatus>(true))
             {
                 if (a == null) continue;
-                AppendLine(sb, ref first, ColourFor(a.statusType), a.changeAmount, StatusName(a.statusType));
+                AddFraction(lines, a.statusType, a.changeAmount);
             }
 
             // ADDED extra stamina
             foreach (Action_GiveExtraStamina a in item.GetComponentsInChildren<Action_GiveExtraStamina>(true))
             {
                 if (a == null) continue;
-                AppendLine(sb, ref first, StaminaColour, a.amount, Zh.IsActive() ? "额外耐力" : "Extra Stamina");
+                int points = Mathf.RoundToInt(a.amount * 100f);
+                if (points == 0) continue;
+                lines.Add(new ModifierLine
+                {
+                    Colour = StaminaColour,
+                    Value = Signed(points),
+                    Label = Zh.IsActive() ? "额外耐力" : "Extra Stamina",
+                    IsStamina = true,
+                });
             }
 
             // ADDED petrify: unlike other statuses, petrify is never applied through Action_ModifyStatus.
             // amulets call AddPetrify(int)/AddStatus(Petrify, float) directly, storing the cost in fields
             // named petrify* on their components (e.g. Action_CloneSelectedItem.petrify, DoubleJumpAmulet.
             // petrifyPerJump). read those fields off the item's components so every petrify source shows up
-            AppendPetrify(sb, ref first, item);
-
-            return sb.ToString();
+            AddPetrify(lines, item);
         }
 
         /**
-         * @brief scans the item's components for petrify cost fields and appends one line per field found
-         * @param sb the builder the lines are appended to
-         * @param first whether the next line is the first; updated as lines are appended
+         * @brief formats one line as rich text, either "+10 Hunger" or, when the label is drawn as an icon,
+         *        just the value plus any qualifier, e.g. "+5 (per jump)"
+         * @param line the line to format
+         * @param iconForLabel true when an icon is shown in place of the status name
+         * @return the coloured rich-text line
+         */
+        public static string FormatLine(ModifierLine line, bool iconForLabel)
+        {
+            StringBuilder sb = new StringBuilder();
+            sb.Append("<color=#").Append(ColorUtility.ToHtmlStringRGB(line.Colour)).Append('>').Append(line.Value);
+
+            if (!iconForLabel) sb.Append(' ').Append(line.Label);
+            if (!string.IsNullOrEmpty(line.Qualifier))
+            {
+                // the qualifier hangs off the label in text mode ("Petrify (per jump)"), off the value in icon mode
+                if (Zh.IsActive()) sb.Append('（').Append(line.Qualifier).Append('）');
+                else sb.Append(" (").Append(line.Qualifier).Append(')');
+            }
+
+            return sb.Append("</color>").ToString();
+        }
+
+        /**
+         * @brief scans the item's components for petrify cost fields and adds one line per field found
+         * @param lines the list the lines are added to
          * @param item the item whose components are scanned
          */
-        private static void AppendPetrify(StringBuilder sb, ref bool first, Item item)
+        private static void AddPetrify(List<ModifierLine> lines, Item item)
         {
             Color colour = ColourFor(CharacterAfflictions.STATUSTYPE.Petrify);
+            string label = StatusName(CharacterAfflictions.STATUSTYPE.Petrify);
 
             foreach (MonoBehaviour comp in item.GetComponentsInChildren<MonoBehaviour>(true))
             {
@@ -114,7 +159,15 @@ namespace PeakItemTooltip
                     else if (f.FieldType == typeof(float)) points = Mathf.RoundToInt((float)f.GetValue(comp) * 100f);
                     else continue;
 
-                    AppendPoints(sb, ref first, colour, points, PetrifyLabel(f.Name));
+                    if (points == 0) continue;
+                    lines.Add(new ModifierLine
+                    {
+                        Colour = colour,
+                        Value = Signed(points),
+                        Label = label,
+                        Qualifier = PetrifyQualifier(f.Name),
+                        Status = CharacterAfflictions.STATUSTYPE.Petrify,
+                    });
                 }
             }
 
@@ -126,19 +179,27 @@ namespace PeakItemTooltip
                 if (a == null) continue;
                 int low = Mathf.RoundToInt(a.minPetrify * 100f);
                 int high = Mathf.RoundToInt(a.maxPetrify * 100f);
-                AppendPointsRange(sb, ref first, colour, low, high, Zh.IsActive() ? "石化" : "Petrify");
+                // a range collapses to a single value when the bounds are equal; an all-zero range is skipped
+                if (high == 0) continue;
+                lines.Add(new ModifierLine
+                {
+                    Colour = colour,
+                    Value = low == high ? Signed(high) : "+" + low + "–" + high,
+                    Label = label,
+                    Status = CharacterAfflictions.STATUSTYPE.Petrify,
+                });
             }
         }
 
         /**
-         * @brief turns a petrify field name into a display label, e.g. "petrifyPerJump" -> "Petrify (per jump)"
+         * @brief turns a petrify field name into its qualifier, e.g. "petrifyPerJump" -> "per jump"
          * @param fieldName the reflected field name, always starting with "petrify"
-         * @return the humanised label
+         * @return the humanised (and localised) qualifier, or null for a bare "petrify" field
          */
-        private static string PetrifyLabel(string fieldName)
+        private static string PetrifyQualifier(string fieldName)
         {
             string rest = fieldName.Length > "petrify".Length ? fieldName.Substring("petrify".Length) : "";
-            if (string.IsNullOrEmpty(rest)) return Zh.IsActive() ? "石化" : "Petrify";
+            if (string.IsNullOrEmpty(rest)) return null;
 
             // split the camel-cased remainder into lowercase words: "PerJump" -> "per jump"
             StringBuilder qualifier = new StringBuilder();
@@ -148,7 +209,7 @@ namespace PeakItemTooltip
                 qualifier.Append(char.ToLowerInvariant(ch));
             }
 
-            return Zh.IsActive() ? "石化（" + QualifierZh(qualifier.ToString()) + "）" : "Petrify (" + qualifier + ")";
+            return QualifierZh(qualifier.ToString());
         }
 
         /**
@@ -201,72 +262,32 @@ namespace PeakItemTooltip
         }
 
         /**
-         * @brief appends one signed, coloured modifier line, scaling the 0-1 fraction to display points and skipping zero-point changes
-         * @param sb the builder the line is appended to
-         * @param first whether this is the first line; set to false after the first append so later lines are newline-separated
-         * @param colour the colour applied to the line via a rich-text tag
+         * @brief adds one status line, scaling the 0-1 fraction to display points and skipping zero-point changes
+         * @param lines the list the line is added to
+         * @param type the status changed; sets the colour, name, and icon
          * @param signedFraction the net change on the 0-1 scale; its sign sets the leading + or -
-         * @param label the status name shown after the value
          */
-        private static void AppendLine(StringBuilder sb, ref bool first, Color colour,
-            float signedFraction, string label)
+        private static void AddFraction(List<ModifierLine> lines, CharacterAfflictions.STATUSTYPE type, float signedFraction)
         {
             // scale the 0-1 fraction to display points, keeping the sign
-            AppendPoints(sb, ref first, colour, Mathf.RoundToInt(signedFraction * 100f), label);
-        }
+            int points = Mathf.RoundToInt(signedFraction * 100f);
+            if (points == 0) return;
 
-        /**
-         * @brief appends one signed, coloured modifier line from an already-scaled points value, skipping zero
-         * @param sb the builder the line is appended to
-         * @param first whether this is the first line; set to false after the first append so later lines are newline-separated
-         * @param colour the colour applied to the line via a rich-text tag
-         * @param signedPoints the net change in display points; its sign sets the leading + or -
-         * @param label the status name shown after the value
-         */
-        private static void AppendPoints(StringBuilder sb, ref bool first, Color colour,
-            int signedPoints, string label)
-        {
-            if (signedPoints == 0) return;
-
-            string sign = signedPoints > 0 ? "+" : "-";
-            string hex = ColorUtility.ToHtmlStringRGB(colour);
-
-            if (!first) sb.Append('\n');
-            first = false;
-
-            sb.Append("<color=#").Append(hex).Append('>')
-              .Append(sign).Append(Mathf.Abs(signedPoints)).Append(' ').Append(label)
-              .Append("</color>");
-        }
-
-        /**
-         * @brief appends a coloured modifier line for a value that varies within a range, as "+low–high label",
-         *        collapsing to a single value when the bounds are equal and skipping an all-zero range
-         * @param sb the builder the line is appended to
-         * @param first whether this is the first line; set to false after the first append
-         * @param colour the colour applied to the line via a rich-text tag
-         * @param lowPoints the lower bound in display points (assumed non-negative)
-         * @param highPoints the upper bound in display points (assumed non-negative)
-         * @param label the status name shown after the value
-         */
-        private static void AppendPointsRange(StringBuilder sb, ref bool first, Color colour,
-            int lowPoints, int highPoints, string label)
-        {
-            if (lowPoints == highPoints)
+            lines.Add(new ModifierLine
             {
-                AppendPoints(sb, ref first, colour, highPoints, label);
-                return;
-            }
-            if (highPoints == 0) return;
+                Colour = ColourFor(type),
+                Value = Signed(points),
+                Label = StatusName(type),
+                Status = type,
+            });
+        }
 
-            string hex = ColorUtility.ToHtmlStringRGB(colour);
-
-            if (!first) sb.Append('\n');
-            first = false;
-
-            sb.Append("<color=#").Append(hex).Append('>')
-              .Append('+').Append(lowPoints).Append('–').Append(highPoints).Append(' ').Append(label)
-              .Append("</color>");
+        /**
+         * @brief formats a points value with a leading + or -
+         */
+        private static string Signed(int points)
+        {
+            return (points > 0 ? "+" : "-") + Mathf.Abs(points);
         }
 
         /**
